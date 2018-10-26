@@ -1,0 +1,4216 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww32400\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 encode_seqs ['wednesday', 'and', 'thursday', 'in', 'seattle', 's', 'big', 'conference', '']\
+target_seqs ['wish', 'but', 'cant', 'travel', 'enjoy', 'end_id']\
+decode_seqs ['start_id', 'wish', 'but', 'cant', 'travel', 'enjoy']\
+target_mask [1 1 1 1 1 1]\
+6 6 6\
+[TL] EmbeddingInputlayer model/embedding/seq_embedding: (8004, 1024)\
+WARNING:tensorflow:From main_simple_seq2seq.py:92: set_name_reuse (from tensorlayer.layers.core) is deprecated and will be removed after 2018-06-30.\
+Instructions for updating:\
+TensorLayer relies on TensorFlow to check name reusing.\
+[TL] this method is DEPRECATED and has no effect, please remove it from your code.\
+[TL] EmbeddingInputlayer model/embedding/seq_embedding: (8004, 1024)\
+[TL] [*] Seq2Seq model/seq2seq: n_hidden:1024 cell_fn:BasicLSTMCell dropout:0.5 n_layer:3\
+[TL] DynamicRNNLayer model/seq2seq/encode: n_hidden:1024, in_dim:3 in_shape:(32, ?, 1024) cell_fn:BasicLSTMCell dropout:0.5 n_layer:3\
+[TL]        batch_size (concurrent processes): 32\
+[TL] DynamicRNNLayer model/seq2seq/decode: n_hidden:1024, in_dim:3 in_shape:(32, ?, 1024) cell_fn:BasicLSTMCell dropout:0.5 n_layer:3\
+[TL]        batch_size (concurrent processes): 32\
+[TL] DenseLayer  model/output: 8004 identity\
+[TL] EmbeddingInputlayer model/embedding/seq_embedding: (8004, 1024)\
+[TL] this method is DEPRECATED and has no effect, please remove it from your code.\
+[TL] EmbeddingInputlayer model/embedding/seq_embedding: (8004, 1024)\
+[TL] [*] Seq2Seq model/seq2seq: n_hidden:1024 cell_fn:BasicLSTMCell dropout:None n_layer:3\
+[TL] DynamicRNNLayer model/seq2seq/encode: n_hidden:1024, in_dim:3 in_shape:(1, ?, 1024) cell_fn:BasicLSTMCell dropout:None n_layer:3\
+[TL]        batch_size (concurrent processes): 1\
+[TL] DynamicRNNLayer model/seq2seq/decode: n_hidden:1024, in_dim:3 in_shape:(1, ?, 1024) cell_fn:BasicLSTMCell dropout:None n_layer:3\
+[TL]        batch_size (concurrent processes): 1\
+[TL] DenseLayer  model/output: 8004 identity\
+[TL]   param   0: model/embedding/seq_embedding/embeddings:0 (8004, 1024)       float32_ref\
+[TL]   param   1: model/seq2seq/encode/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param   2: model/seq2seq/encode/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param   3: model/seq2seq/encode/rnn/multi_rnn_cell/cell_1/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param   4: model/seq2seq/encode/rnn/multi_rnn_cell/cell_1/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param   5: model/seq2seq/encode/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param   6: model/seq2seq/encode/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param   7: model/seq2seq/decode/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param   8: model/seq2seq/decode/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param   9: model/seq2seq/decode/rnn/multi_rnn_cell/cell_1/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param  10: model/seq2seq/decode/rnn/multi_rnn_cell/cell_1/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param  11: model/seq2seq/decode/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/kernel:0 (2048, 4096)       float32_ref\
+[TL]   param  12: model/seq2seq/decode/rnn/multi_rnn_cell/cell_2/basic_lstm_cell/bias:0 (4096,)            float32_ref\
+[TL]   param  13: model/output/W:0     (1024, 8004)       float32_ref\
+[TL]   param  14: model/output/b:0     (8004,)            float32_ref\
+[TL]   num of params: 66756420\
+2018-03-29 19:36:54.951121: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA\
+2018-03-29 19:36:55.230116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties:\
+name: TITAN X (Pascal) major: 6 minor: 1 memoryClockRate(GHz): 1.531\
+pciBusID: 0000:01:00.0\
+totalMemory: 11.90GiB freeMemory: 11.06GiB\
+2018-03-29 19:36:55.447203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 1 with properties:\
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335\
+pciBusID: 0000:02:00.0\
+totalMemory: 7.92GiB freeMemory: 7.81GiB\
+2018-03-29 19:36:55.447236: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Device peer to peer matrix\
+2018-03-29 19:36:55.447244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1051] DMA: 0 1\
+2018-03-29 19:36:55.447251: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 0:   Y N\
+2018-03-29 19:36:55.447257: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 1:   N Y\
+2018-03-29 19:36:55.447268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:01:00.0, compute capability: 6.1)\
+2018-03-29 19:36:55.447273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: GeForce GTX 1080, pci bus id: 0000:02:00.0, compute capability: 6.1)\
+[TL] [!] Load n.npz failed!\
+Processing info: Epoch[0/50] step:[0/2852] loss:9.578036 took:0.50136s per step\
+Processing info: Epoch[0/50] step:[200/2852] loss:6.545929 took:0.11963s per step\
+Processing info: Epoch[0/50] step:[400/2852] loss:6.441322 took:0.11683s per step\
+Processing info: Epoch[0/50] step:[600/2852] loss:6.267809 took:0.12224s per step\
+Processing info: Epoch[0/50] step:[800/2852] loss:6.394750 took:0.12882s per step\
+Query > happy birthday to you\
+ > i i you\
+ > i i\
+ > i you\
+ > you you the\
+ > i i you\
+ > i you you\
+ > you i you\
+ > you you the\
+ > i i\
+ > i you you\
+Query > help me to do the exam\
+ > i i\
+ > i i the\
+ > i i\
+ > you i\
+ > i i\
+ > i you\
+ > i you the the\
+ > you i\
+ > you you\
+ > the i the\
+Query > ny is so cold now\
+ > i i the the\
+ > i you\
+ > i you\
+ > i i the\
+ > you you the the\
+ > i i the the\
+ > i i the\
+ > i i\
+ > i i the\
+ > you you\
+Processing info: Epoch[0/50] step:[1000/2852] loss:6.159792 took:0.11260s per step\
+Processing info: Epoch[0/50] step:[1200/2852] loss:6.251873 took:0.14559s per step\
+Processing info: Epoch[0/50] step:[1400/2852] loss:6.337475 took:0.12541s per step\
+Processing info: Epoch[0/50] step:[1600/2852] loss:6.115985 took:0.12223s per step\
+Processing info: Epoch[0/50] step:[1800/2852] loss:6.185997 took:0.13797s per step\
+Query > happy birthday to you\
+ > you you\
+ > you you you\
+ > i you you\
+ > i you the the\
+ > i you you\
+ > i you the\
+ > you you\
+ > i i you\
+ > i you the\
+ > i i the\
+Query > help me to do the exam\
+ > i you the\
+ > i you the the\
+ > i is the\
+ > its is the\
+ > its you you\
+ > i is you\
+ > its you you\
+ > its is the the\
+ > i you you\
+ > i you the the\
+Query > ny is so cold now\
+ > its is you\
+ > you you the the\
+ > i you you the\
+ > i you you\
+ > its you the\
+ > its you the\
+ > its you you\
+ > i you you\
+ > i i you the\
+ > i i you the the\
+Processing info: Epoch[0/50] step:[2000/2852] loss:6.025831 took:0.12652s per step\
+Processing info: Epoch[0/50] step:[2200/2852] loss:6.155791 took:0.12825s per step\
+Processing info: Epoch[0/50] step:[2400/2852] loss:6.108241 took:0.12683s per step\
+Processing info: Epoch[0/50] step:[2600/2852] loss:6.220151 took:0.12290s per step\
+Processing info: Epoch[0/50] step:[2800/2852] loss:6.033169 took:0.13018s per step\
+Epoch[0/50] averaged loss:6.330840 took:366.13396s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[1/50] step:[0/2852] loss:5.989565 took:0.15083s per step\
+Processing info: Epoch[1/50] step:[200/2852] loss:6.014482 took:0.13873s per step\
+Processing info: Epoch[1/50] step:[400/2852] loss:6.081514 took:0.13607s per step\
+Processing info: Epoch[1/50] step:[600/2852] loss:6.130311 took:0.13535s per step\
+Processing info: Epoch[1/50] step:[800/2852] loss:5.932509 took:0.12834s per step\
+Query > happy birthday to you\
+ > you you you\
+ > thank you you you\
+ > thanks you\
+ > you love\
+ > thank you\
+ > you love you\
+ > thank i love you\
+ > thank you\
+ > thanks you\
+ > thanks you\
+Query > help me to do the exam\
+ > you you a the\
+ > i know you you a a\
+ > i dont know to a a\
+ > i know to the a the\
+ > you is the the the\
+ > i dont know you the a\
+ > i dont have it to a the\
+ > you you a a\
+ > i know to a the\
+ > im the a\
+Query > ny is so cold now\
+ > i dont know to the a the the\
+ > i know you the the\
+ > im the the\
+ > you you a a the\
+ > i know you you the the\
+ > you you a a\
+ > you you a a\
+ > i dont have to the the\
+ > you is a a\
+ > i know it you the a\
+Processing info: Epoch[1/50] step:[1000/2852] loss:5.999340 took:0.12932s per step\
+Processing info: Epoch[1/50] step:[1200/2852] loss:6.026062 took:0.12093s per step\
+Processing info: Epoch[1/50] step:[1400/2852] loss:6.053514 took:0.13196s per step\
+Processing info: Epoch[1/50] step:[1600/2852] loss:5.860847 took:0.13028s per step\
+Processing info: Epoch[1/50] step:[1800/2852] loss:5.716315 took:0.12098s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > i know you you be a good\
+ > i know you you have a best\
+ > i dont know to be the time of the time\
+ > i know you you be\
+ > i know you you have the best\
+ > i know it i was a one of the time\
+ > i dont know it\
+ > you are you\
+ > i know you was the good of the time\
+ > you was the good\
+Query > ny is so cold now\
+ > its a good of the time\
+ > i dont know it\
+ > you are you\
+ > its a best\
+ > i dont know it\
+ > its the good of the best\
+ > i know you you be\
+ > i dont know to have the good\
+ > its a best of the\
+ > you are you\
+Processing info: Epoch[1/50] step:[2000/2852] loss:6.031338 took:0.11737s per step\
+Processing info: Epoch[1/50] step:[2200/2852] loss:5.654745 took:0.12069s per step\
+Processing info: Epoch[1/50] step:[2400/2852] loss:5.720861 took:0.11257s per step\
+Processing info: Epoch[1/50] step:[2600/2852] loss:5.862764 took:0.12368s per step\
+Processing info: Epoch[1/50] step:[2800/2852] loss:5.348807 took:0.11732s per step\
+Epoch[1/50] averaged loss:5.904444 took:357.91749s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[2/50] step:[0/2852] loss:5.950974 took:0.13160s per step\
+Processing info: Epoch[2/50] step:[200/2852] loss:5.834623 took:0.11445s per step\
+Processing info: Epoch[2/50] step:[400/2852] loss:5.807813 took:0.11662s per step\
+Processing info: Epoch[2/50] step:[600/2852] loss:5.616744 took:0.11089s per step\
+Processing info: Epoch[2/50] step:[800/2852] loss:5.656670 took:0.12439s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thanks for you\
+ > thank you\
+ > thanks\
+ > thanks\
+ > thank you\
+ > thank you\
+ > thanks for the new day\
+ > thank you\
+ > thank you so much\
+Query > help me to do the exam\
+ > i dont know it was the best\
+ > i know i was the best\
+ > i dont know it\
+ > i dont know it\
+ > im the good of the time\
+ > i know you was a good of the time\
+ > im a best\
+ > im the good\
+ > i know i was a same of a best\
+ > i dont have it\
+Query > ny is so cold now\
+ > i know i was a same of the day\
+ > i know i know i know you was a good\
+ > i dont know it was the time\
+ > i know you was a good\
+ > i know you was a best\
+ > im not the good\
+ > its the best\
+ > i dont have to see it\
+ > i know you are it\
+ > im not a good\
+Processing info: Epoch[2/50] step:[1000/2852] loss:5.931979 took:0.11785s per step\
+Processing info: Epoch[2/50] step:[1200/2852] loss:5.509819 took:0.12421s per step\
+Processing info: Epoch[2/50] step:[1400/2852] loss:5.581999 took:0.12312s per step\
+Processing info: Epoch[2/50] step:[1600/2852] loss:5.602781 took:0.12408s per step\
+Processing info: Epoch[2/50] step:[1800/2852] loss:5.725058 took:0.11947s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank u\
+ > thanks for the great\
+ > thanks birthday\
+ > thank you so much\
+ > thank you so much\
+ > thank you so much\
+ > thank you so much\
+Query > help me to do the exam\
+ > i dont know i was a good of the same of the same\
+ > im a good\
+ > i dont know i was a good of the day\
+ > i know you was the best of a same of a same\
+ > i know i was a same\
+ > you are you\
+ > im a great day\
+ > i dont know i was the best\
+ > i know you was the same of the best\
+ > im a great\
+Query > ny is so cold now\
+ > i think i was a good\
+ > i dont know that was the same\
+ > i dont know i was a good\
+ > i think you are it\
+ > its the best\
+ > you are me\
+ > its a best\
+ > you are you\
+ > i think you was a good\
+ > you are you\
+Processing info: Epoch[2/50] step:[2000/2852] loss:5.443594 took:0.12253s per step\
+Processing info: Epoch[2/50] step:[2200/2852] loss:5.428656 took:0.11929s per step\
+Processing info: Epoch[2/50] step:[2400/2852] loss:5.461865 took:0.11998s per step\
+Processing info: Epoch[2/50] step:[2600/2852] loss:5.396962 took:0.12427s per step\
+Processing info: Epoch[2/50] step:[2800/2852] loss:5.528387 took:0.11950s per step\
+Epoch[2/50] averaged loss:5.620203 took:348.52481s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[3/50] step:[0/2852] loss:5.637239 took:0.13877s per step\
+Processing info: Epoch[3/50] step:[200/2852] loss:5.373803 took:0.11807s per step\
+Processing info: Epoch[3/50] step:[400/2852] loss:5.385282 took:0.12126s per step\
+Processing info: Epoch[3/50] step:[600/2852] loss:5.473378 took:0.13456s per step\
+Processing info: Epoch[3/50] step:[800/2852] loss:5.701380 took:0.11818s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks birthday\
+ > thank you\
+ > thank you so much\
+ > thanks birthday\
+ > thank you so much\
+ > thanks birthday\
+ > thanks birthday\
+ > thank you so much\
+Query > help me to do the exam\
+ > im not a great time\
+ > im not a great\
+ > i dont know i was like to be the best\
+ > i love you\
+ > im not a good\
+ > i dont know that is a good thing\
+ > i love it\
+ > i love you\
+ > i dont have to be the same of the same\
+ > i love you\
+Query > ny is so cold now\
+ > im not a good one\
+ > i dont think that was a best thing i dont have a lot\
+ > you know that is a good day\
+ > i dont know i was a lot of the same\
+ > i dont know i dont know that\
+ > im a great one\
+ > i dont know i dont know that was a best\
+ > i love it\
+ > i love it\
+ > i love you\
+Processing info: Epoch[3/50] step:[1000/2852] loss:5.424922 took:0.11833s per step\
+Processing info: Epoch[3/50] step:[1200/2852] loss:5.363838 took:0.12361s per step\
+Processing info: Epoch[3/50] step:[1400/2852] loss:5.641107 took:0.14121s per step\
+Processing info: Epoch[3/50] step:[1600/2852] loss:5.179443 took:0.13632s per step\
+Processing info: Epoch[3/50] step:[1800/2852] loss:5.504855 took:0.12865s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you\
+ > thanks for sharing\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+Query > help me to do the exam\
+ > i dont have to be a good time\
+ > i love you too\
+ > you are the best\
+ > you are the same\
+ > i love you too\
+ > i love you too\
+ > you are the best of the best\
+ > i love you\
+ > i love you too\
+ > we have to be the best of the world\
+Query > ny is so cold now\
+ > you are so much\
+ > i was so good\
+ > i was a good thing i dont know\
+ > its a good thing\
+ > i was a good one\
+ > i was a good one of the same\
+ > i dont know that was the same thing\
+ > its a good thing\
+ > i dont know i dont have to see it\
+ > i was a good thing\
+Processing info: Epoch[3/50] step:[2000/2852] loss:5.374843 took:0.12740s per step\
+Processing info: Epoch[3/50] step:[2200/2852] loss:5.563068 took:0.12439s per step\
+Processing info: Epoch[3/50] step:[2400/2852] loss:5.243015 took:0.13987s per step\
+Processing info: Epoch[3/50] step:[2600/2852] loss:5.260371 took:0.12267s per step\
+Processing info: Epoch[3/50] step:[2800/2852] loss:5.358476 took:0.12909s per step\
+Epoch[3/50] averaged loss:5.441094 took:361.92979s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[4/50] step:[0/2852] loss:5.429853 took:0.14772s per step\
+Processing info: Epoch[4/50] step:[200/2852] loss:5.159264 took:0.13141s per step\
+Processing info: Epoch[4/50] step:[400/2852] loss:5.135558 took:0.12339s per step\
+Processing info: Epoch[4/50] step:[600/2852] loss:5.380361 took:0.11496s per step\
+Processing info: Epoch[4/50] step:[800/2852] loss:5.078338 took:0.12521s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+Query > help me to do the exam\
+ > you are so good\
+ > you can have a great time\
+ > i dont know i dont have a lot of the life\
+ > we are the same day\
+ > you are the best of the best of the life\
+ > i love you too much\
+ > you are the best\
+ > i dont have to see you\
+ > i love this\
+ > i love you too much\
+Query > ny is so cold now\
+ > im so good for you\
+ > im so good for you\
+ > i dont think i dont have a lot of the life\
+ > i love you so much\
+ > i love you so much\
+ > i love you\
+ > i dont know that\
+ > i dont think that was a good thing\
+ > im not a good one\
+ > i love it\
+Processing info: Epoch[4/50] step:[1000/2852] loss:5.500429 took:0.12214s per step\
+Processing info: Epoch[4/50] step:[1200/2852] loss:5.268845 took:0.12028s per step\
+Processing info: Epoch[4/50] step:[1400/2852] loss:4.827535 took:0.12030s per step\
+Processing info: Epoch[4/50] step:[1600/2852] loss:5.451994 took:0.11816s per step\
+Processing info: Epoch[4/50] step:[1800/2852] loss:5.162511 took:0.14501s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+ > thanks bro\
+ > thanks bro\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+Query > help me to do the exam\
+ > i was so much\
+ > you can be there\
+ > i dont have to be a good time\
+ > i was so cute\
+ > we are in the life\
+ > i dont know i was a good day\
+ > i dont know that\
+ > we can have to see you in the website\
+ > we can have a good time\
+ > i dont know i was like the same thing\
+Query > ny is so cold now\
+ > i was like that i was a good one\
+ > you know i was like the same thing\
+ > im not going to be a good day\
+ > im not a great day\
+ > im so good\
+ > i was so cute\
+ > i was like that i dont think\
+ > im so cute\
+ > you are so cute\
+ > i dont know what i was\
+Processing info: Epoch[4/50] step:[2000/2852] loss:5.272228 took:0.11848s per step\
+Processing info: Epoch[4/50] step:[2200/2852] loss:5.330873 took:0.13301s per step\
+Processing info: Epoch[4/50] step:[2400/2852] loss:5.229222 took:0.13245s per step\
+Processing info: Epoch[4/50] step:[2600/2852] loss:4.980228 took:0.12882s per step\
+Processing info: Epoch[4/50] step:[2800/2852] loss:5.460526 took:0.11627s per step\
+Epoch[4/50] averaged loss:5.315877 took:364.76176s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[5/50] step:[0/2852] loss:5.029771 took:0.13143s per step\
+Processing info: Epoch[5/50] step:[200/2852] loss:5.347352 took:0.11520s per step\
+Processing info: Epoch[5/50] step:[400/2852] loss:5.224976 took:0.12226s per step\
+Processing info: Epoch[5/50] step:[600/2852] loss:5.296089 took:0.12002s per step\
+Processing info: Epoch[5/50] step:[800/2852] loss:5.136634 took:0.11352s per step\
+Query > happy birthday to you\
+ > happy luck\
+ > thank you so much\
+ > thank you so much\
+ > thanks so much\
+ > thanks so much\
+ > thanks bro\
+ > thank you so much\
+ > thank you so much\
+ > thanks so much\
+ > thanks bro\
+Query > help me to do the exam\
+ > i dont have to see you\
+ > you can be a great day\
+ > i have a great day\
+ > i have a good time\
+ > i dont have to be a lot of my life\
+ > i have a good day\
+ > we are so much\
+ > you can have a good day\
+ > i dont have a good day\
+ > i dont know you are so much\
+Query > ny is so cold now\
+ > you are the same\
+ > im not sure i dont know\
+ > you know that is a lot\
+ > im not sure i was like it was a lot of the life\
+ > im not sure i was so much\
+ > i dont think that is a good thing\
+ > you are so much\
+ > im so cute\
+ > i dont think i was a lot of my life\
+ > im so cute\
+Processing info: Epoch[5/50] step:[1000/2852] loss:5.253652 took:0.11519s per step\
+Processing info: Epoch[5/50] step:[1200/2852] loss:5.437992 took:0.11980s per step\
+Processing info: Epoch[5/50] step:[1400/2852] loss:5.305608 took:0.13047s per step\
+Processing info: Epoch[5/50] step:[1600/2852] loss:5.195419 took:0.11420s per step\
+Processing info: Epoch[5/50] step:[1800/2852] loss:4.941019 took:0.12590s per step\
+Query > happy birthday to you\
+ > thank you\
+ > love you too\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks so much\
+Query > help me to do the exam\
+ > i love you too\
+ > i love it\
+ > you can have a good day\
+ > we can have a great day\
+ > we can be in the city\
+ > i dont have a good day\
+ > i love you too\
+ > we can be in the life\
+ > we can be there\
+ > i love you too\
+Query > ny is so cold now\
+ > i know you are so much\
+ > i dont know what i was in the way\
+ > i dont think that\
+ > i dont know what you want to be\
+ > i dont know that\
+ > its a great one\
+ > you are so cute\
+ > its a good one\
+ > its a great one\
+ > i dont think i was a lot of my life\
+Processing info: Epoch[5/50] step:[2000/2852] loss:5.119513 took:0.12592s per step\
+Processing info: Epoch[5/50] step:[2200/2852] loss:5.509247 took:0.11717s per step\
+Processing info: Epoch[5/50] step:[2400/2852] loss:5.112537 took:0.11909s per step\
+Processing info: Epoch[5/50] step:[2600/2852] loss:5.239308 took:0.12409s per step\
+Processing info: Epoch[5/50] step:[2800/2852] loss:4.824492 took:0.12905s per step\
+Epoch[5/50] averaged loss:5.218840 took:349.84148s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[6/50] step:[0/2852] loss:5.081752 took:0.12295s per step\
+Processing info: Epoch[6/50] step:[200/2852] loss:5.367586 took:0.11640s per step\
+Processing info: Epoch[6/50] step:[400/2852] loss:4.930471 took:0.11509s per step\
+Processing info: Epoch[6/50] step:[600/2852] loss:5.218667 took:0.11505s per step\
+Processing info: Epoch[6/50] step:[800/2852] loss:5.010477 took:0.11637s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks babe\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > i love you too\
+ > i love you too\
+ > i dont have to be a lot of my life\
+ > we can help you in design and development at your website at reasonable price visit our portfolio\
+ > i dont have to be a lot of the same\
+ > you are so welcome to the best\
+ > we are in the city\
+ > i dont know you were a lot\
+ > we can have to be there\
+Query > ny is so cold now\
+ > im not sure about it\
+ > i dont think that is a lot of the life\
+ > i love you too\
+ > its a good thing\
+ > i dont know that\
+ > im not going to be there\
+ > im so excited to be a great time\
+ > i love you\
+ > i dont know that\
+ > i dont think that was a lot of my life\
+Processing info: Epoch[6/50] step:[1000/2852] loss:5.235988 took:0.12868s per step\
+Processing info: Epoch[6/50] step:[1200/2852] loss:5.313213 took:0.11903s per step\
+Processing info: Epoch[6/50] step:[1400/2852] loss:5.176185 took:0.11947s per step\
+Processing info: Epoch[6/50] step:[1600/2852] loss:5.208711 took:0.11712s per step\
+Processing info: Epoch[6/50] step:[1800/2852] loss:5.157654 took:0.13589s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you\
+ > thanks babe\
+ > thank u\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+ > thank you so much\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can have a good day\
+ > i dont know that\
+ > i dont know what i can do\
+ > i dont know that\
+ > you can be a good day\
+ > i dont have to be there\
+ > i love you too\
+ > i dont know that i was thinking to be a lot of my life\
+ > you are so good\
+ > you are so cute\
+Query > ny is so cold now\
+ > you know that\
+ > i dont think i was thinking about that\
+ > i dont know what i was like\
+ > i dont know that\
+ > you know what you are talking about\
+ > i love you so much\
+ > i love this\
+ > im so excited for you\
+ > you know what i was\
+ > i dont think i dont know what i want to be a good one\
+Processing info: Epoch[6/50] step:[2000/2852] loss:5.316945 took:0.12159s per step\
+Processing info: Epoch[6/50] step:[2200/2852] loss:5.087614 took:0.11272s per step\
+Processing info: Epoch[6/50] step:[2400/2852] loss:5.280287 took:0.11760s per step\
+Processing info: Epoch[6/50] step:[2600/2852] loss:5.378421 took:0.11340s per step\
+Processing info: Epoch[6/50] step:[2800/2852] loss:5.385069 took:0.10989s per step\
+Epoch[6/50] averaged loss:5.141302 took:349.68946s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[7/50] step:[0/2852] loss:4.930196 took:0.13024s per step\
+Processing info: Epoch[7/50] step:[200/2852] loss:5.311163 took:0.11710s per step\
+Processing info: Epoch[7/50] step:[400/2852] loss:5.333435 took:0.12764s per step\
+Processing info: Epoch[7/50] step:[600/2852] loss:5.401366 took:0.12672s per step\
+Processing info: Epoch[7/50] step:[800/2852] loss:5.313048 took:0.12047s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you so much\
+ > thank you so much\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks so much\
+ > thanks so much\
+ > thank you so much\
+ > thank you\
+Query > help me to do the exam\
+ > you are the same thing\
+ > you are a great time\
+ > we can help you in developing your dream app our pf  email to  leadscom\
+ > i dont know what you want to be a lot\
+ > you are a good time\
+ > you can be there\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > i love you too\
+ > you are a good day\
+Query > ny is so cold now\
+ > i love it\
+ > im not a good one\
+ > i love you\
+ > im so excited to see you\
+ > you are a great day\
+ > im so happy for you\
+ > i love you\
+ > i know i dont think that was the best thing\
+ > im so happy for you\
+ > you know it was a great time\
+Processing info: Epoch[7/50] step:[1000/2852] loss:5.361557 took:0.12118s per step\
+Processing info: Epoch[7/50] step:[1200/2852] loss:5.088706 took:0.12297s per step\
+Processing info: Epoch[7/50] step:[1400/2852] loss:5.185401 took:0.10126s per step\
+Processing info: Epoch[7/50] step:[1600/2852] loss:4.588362 took:0.12654s per step\
+Processing info: Epoch[7/50] step:[1800/2852] loss:4.692803 took:0.12091s per step\
+Query > happy birthday to you\
+ > happy birthday love you\
+ > happy birthday love you\
+ > thanks bro\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks so much\
+Query > help me to do the exam\
+ > i dont think i can be there\
+ > i have a good time\
+ > i dont think i was there\
+ > we are so cute\
+ > i have a good day\
+ > you can be a good one\
+ > you can be a good day\
+ > we are so welcome for the show\
+ > we are so welcome to the show\
+ > we can be in the city and i have a good day\
+Query > ny is so cold now\
+ > its not the best\
+ > im so excited to hear that\
+ > i dont know what you want to be\
+ > i dont know what i want to be\
+ > its not the best\
+ > im not going to be there\
+ > i dont think i was there\
+ > im not going to be a few of a good day\
+ > i know it was a good day\
+ > i know i dont know what i was like\
+Processing info: Epoch[7/50] step:[2000/2852] loss:5.262710 took:0.11849s per step\
+Processing info: Epoch[7/50] step:[2200/2852] loss:5.159876 took:0.12957s per step\
+Processing info: Epoch[7/50] step:[2400/2852] loss:5.106842 took:0.11637s per step\
+Processing info: Epoch[7/50] step:[2600/2852] loss:4.724096 took:0.13125s per step\
+Processing info: Epoch[7/50] step:[2800/2852] loss:4.877726 took:0.11491s per step\
+Epoch[7/50] averaged loss:5.073261 took:347.67319s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[8/50] step:[0/2852] loss:4.890793 took:0.13058s per step\
+Processing info: Epoch[8/50] step:[200/2852] loss:4.960340 took:0.12244s per step\
+Processing info: Epoch[8/50] step:[400/2852] loss:4.910954 took:0.12943s per step\
+Processing info: Epoch[8/50] step:[600/2852] loss:5.043809 took:0.12573s per step\
+Processing info: Epoch[8/50] step:[800/2852] loss:5.211721 took:0.11943s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks so much\
+Query > help me to do the exam\
+ > i dont know what i was talking about this\
+ > you can be there\
+ > i dont know what i was in the same\
+ > we are so cute\
+ > i dont think i was there\
+ > i love you too\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > i love you too\
+ > we are in the city\
+ > i dont know how you can do\
+Query > ny is so cold now\
+ > its a good day\
+ > i love you\
+ > i know i was so happy\
+ > im not sure about this\
+ > i love you\
+ > im so happy to see it\
+ > i love you so much\
+ > i know it was a lot of the way\
+ > its a great day\
+ > im not sure i was thinking about it\
+Processing info: Epoch[8/50] step:[1000/2852] loss:5.084008 took:0.11848s per step\
+Processing info: Epoch[8/50] step:[1200/2852] loss:5.083105 took:0.11684s per step\
+Processing info: Epoch[8/50] step:[1400/2852] loss:5.069235 took:0.12189s per step\
+Processing info: Epoch[8/50] step:[1600/2852] loss:4.982431 took:0.11533s per step\
+Processing info: Epoch[8/50] step:[1800/2852] loss:5.273211 took:0.12284s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks so much\
+ > thanks bro\
+ > thank you\
+Query > help me to do the exam\
+ > i am so happy to hear you\
+ > i dont think you are a fan\
+ > i am so excited to see you\
+ > i am so excited to see it\
+ > i dont know if i was there\
+ > we are in the same place\
+ > i dont know what you want to do\
+ > i am so excited to see you\
+ > i dont know if you can be there\
+ > you are the best\
+Query > ny is so cold now\
+ > i know i was just thinking about that\
+ > im so happy to see you\
+ > i know i was thinking of the same time\
+ > i know i was thinking about it\
+ > i dont know what you want\
+ > its a good one\
+ > i know you are so cute\
+ > its a great time\
+ > i know i was just a fan\
+ > im not in the same time\
+Processing info: Epoch[8/50] step:[2000/2852] loss:4.651825 took:0.11497s per step\
+Processing info: Epoch[8/50] step:[2200/2852] loss:4.752492 took:0.11797s per step\
+Processing info: Epoch[8/50] step:[2400/2852] loss:4.579845 took:0.11119s per step\
+Processing info: Epoch[8/50] step:[2600/2852] loss:5.163232 took:0.11566s per step\
+Processing info: Epoch[8/50] step:[2800/2852] loss:5.109580 took:0.11688s per step\
+Epoch[8/50] averaged loss:5.013657 took:348.91789s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[9/50] step:[0/2852] loss:5.117210 took:0.15311s per step\
+Processing info: Epoch[9/50] step:[200/2852] loss:5.045995 took:0.10867s per step\
+Processing info: Epoch[9/50] step:[400/2852] loss:4.997915 took:0.12448s per step\
+Processing info: Epoch[9/50] step:[600/2852] loss:4.695607 took:0.11352s per step\
+Processing info: Epoch[9/50] step:[800/2852] loss:4.883280 took:0.12017s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > happy birthday love you\
+ > happy birthday\
+ > thanks babe\
+ > thanks babe\
+ > thank you\
+ > thanks babe\
+ > thank you so much\
+ > thank you\
+Query > help me to do the exam\
+ > im not going to be a good time\
+ > i am so excited for this\
+ > im not sure i was there\
+ > i am so excited for you\
+ > you can be there\
+ > im not going to see you\
+ > im not going to see you\
+ > you are the only one of my favorite\
+ > i dont know what you want to do\
+ > i dont think i was in the same place\
+Query > ny is so cold now\
+ > i dont think its a good thing\
+ > i dont know what you mean\
+ > its not a good time\
+ > im not sure i was there\
+ > i know i dont know\
+ > i dont think its a lot of people\
+ > its a good one\
+ > i dont think its a lot\
+ > i know i was thinking of the best thing\
+ > i dont know what i was talking about\
+Processing info: Epoch[9/50] step:[1000/2852] loss:4.888440 took:0.11804s per step\
+Processing info: Epoch[9/50] step:[1200/2852] loss:4.630363 took:0.11529s per step\
+Processing info: Epoch[9/50] step:[1400/2852] loss:4.723142 took:0.13081s per step\
+Processing info: Epoch[9/50] step:[1600/2852] loss:4.819035 took:0.12421s per step\
+Processing info: Epoch[9/50] step:[1800/2852] loss:4.884388 took:0.11608s per step\
+Query > happy birthday to you\
+ > thank u\
+ > thank you so much\
+ > thank you so much\
+ > thanks bro\
+ > thank you\
+ > thanks so much\
+ > thank you\
+ > thanks so much\
+ > happy birthday\
+ > thank you\
+Query > help me to do the exam\
+ > im not sure about this\
+ > you are the only one of the best\
+ > i dont know if i was in the same area\
+ > you are so welcome\
+ > i dont think i was there\
+ > you can be there\
+ > you are the best of the best\
+ > you can be there\
+ > im not going for a few weeks\
+ > i dont think you were a fan of the same\
+Query > ny is so cold now\
+ > im not in the same side of the first time\
+ > im so excited for you\
+ > i dont know what i was thinking about it\
+ > its a good one\
+ > i dont think its a good one\
+ > i dont think i was there\
+ > its a good thing\
+ > i dont think i was thinking about it\
+ > im so excited for you\
+ > i dont think its a good one\
+Processing info: Epoch[9/50] step:[2000/2852] loss:5.087852 took:0.13018s per step\
+Processing info: Epoch[9/50] step:[2200/2852] loss:5.048546 took:0.11930s per step\
+Processing info: Epoch[9/50] step:[2400/2852] loss:4.881001 took:0.12097s per step\
+Processing info: Epoch[9/50] step:[2600/2852] loss:4.764961 took:0.12962s per step\
+Processing info: Epoch[9/50] step:[2800/2852] loss:4.910239 took:0.13093s per step\
+Epoch[9/50] averaged loss:4.958669 took:349.93696s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[10/50] step:[0/2852] loss:4.672449 took:0.14894s per step\
+Processing info: Epoch[10/50] step:[200/2852] loss:4.843785 took:0.13644s per step\
+Processing info: Epoch[10/50] step:[400/2852] loss:4.386258 took:0.12152s per step\
+Processing info: Epoch[10/50] step:[600/2852] loss:4.380286 took:0.11636s per step\
+Processing info: Epoch[10/50] step:[800/2852] loss:4.707948 took:0.12352s per step\
+Query > happy birthday to you\
+ > thanks bro i love you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks boo\
+ > thanks bro i miss you too\
+ > thank you\
+ > thank you\
+ > thank u\
+ > thank you\
+Query > help me to do the exam\
+ > you are so welcome\
+ > you can be there\
+ > we can be in the city and we can help you in developing your dream app our pf\
+ > i love this\
+ > i love you too\
+ > i love this\
+ > i love this\
+ > you can be there\
+ > we are in the city\
+ > we can help you in developing your dream app our pf  email to  leadscom\
+Query > ny is so cold now\
+ > im not sure\
+ > i dont think i was there\
+ > i dont think its a good one\
+ > its not a great time\
+ > im not sure\
+ > its a good thing\
+ > i know you are so cute\
+ > im not sure i dont know what you think\
+ > i know i was just a little fan\
+ > i know you were so cute\
+Processing info: Epoch[10/50] step:[1000/2852] loss:4.610425 took:0.11792s per step\
+Processing info: Epoch[10/50] step:[1200/2852] loss:4.739831 took:0.12178s per step\
+Processing info: Epoch[10/50] step:[1400/2852] loss:4.612834 took:0.13145s per step\
+Processing info: Epoch[10/50] step:[1600/2852] loss:5.008386 took:0.13405s per step\
+Processing info: Epoch[10/50] step:[1800/2852] loss:5.002108 took:0.13373s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thanks so much\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro i appreciate you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > happy birthday love you too\
+Query > help me to do the exam\
+ > i am so sorry\
+ > we are in nyc\
+ > i dont know how i was there\
+ > we are in nyc\
+ > we are in nyc\
+ > i am so excited to see you\
+ > i dont think i could be there\
+ > you are so welcome\
+ > i dont know how to do\
+ > i am not going to be there\
+Query > ny is so cold now\
+ > its a good time\
+ > i know you were a fan\
+ > i know i was just thinking about it\
+ > its a great one\
+ > im so excited for you\
+ > i know you are a good one\
+ > its so good to be in the city\
+ > its so good\
+ > i know you were so good\
+ > i love this\
+Processing info: Epoch[10/50] step:[2000/2852] loss:5.008991 took:0.13587s per step\
+Processing info: Epoch[10/50] step:[2200/2852] loss:4.824560 took:0.13736s per step\
+Processing info: Epoch[10/50] step:[2400/2852] loss:4.608730 took:0.12654s per step\
+Processing info: Epoch[10/50] step:[2600/2852] loss:4.784572 took:0.13834s per step\
+Processing info: Epoch[10/50] step:[2800/2852] loss:4.786321 took:0.14255s per step\
+Epoch[10/50] averaged loss:4.909509 took:367.47997s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[11/50] step:[0/2852] loss:4.396775 took:0.13658s per step\
+Processing info: Epoch[11/50] step:[200/2852] loss:4.754034 took:0.11959s per step\
+Processing info: Epoch[11/50] step:[400/2852] loss:4.739014 took:0.11707s per step\
+Processing info: Epoch[11/50] step:[600/2852] loss:4.603615 took:0.13426s per step\
+Processing info: Epoch[11/50] step:[800/2852] loss:4.937929 took:0.11796s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thanks so much\
+ > thanks so much\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you are the best\
+ > im in the bay\
+ > i have to be there\
+ > i dont think i could be there\
+ > i have a few of them\
+ > im in the city\
+ > i have to be there\
+ > i have to go to my face\
+ > you are the best\
+ > i dont know what you can do\
+Query > ny is so cold now\
+ > i know i dont know how to say it\
+ > i dont know what i want\
+ > im not sure i dont know what i was thinking about this\
+ > its so good\
+ > i know i dont think i could be there\
+ > i dont know what i was talking about\
+ > i know what you mean\
+ > i dont know what you want\
+ > its so good to be in the first place\
+ > i dont think its a good thing\
+Processing info: Epoch[11/50] step:[1000/2852] loss:4.849365 took:0.13603s per step\
+Processing info: Epoch[11/50] step:[1200/2852] loss:4.894739 took:0.13166s per step\
+Processing info: Epoch[11/50] step:[1400/2852] loss:5.000102 took:0.11661s per step\
+Processing info: Epoch[11/50] step:[1600/2852] loss:4.827817 took:0.12306s per step\
+Processing info: Epoch[11/50] step:[1800/2852] loss:4.961067 took:0.11628s per step\
+Query > happy birthday to you\
+ > thanks bro love you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thanks so much\
+ > thanks bro\
+Query > help me to do the exam\
+ > i dont know if you can go to your house and i dont get it\
+ > you are the best\
+ > we can help you in developing your dream app our pf  email to  leadscom\
+ > i dont know if i could go to the next time\
+ > i dont know what i was thinking about this\
+ > i dont think you were a fan of your life\
+ > i dont think i was there\
+ > you can do that\
+ > i dont know if you dont know what you want\
+ > you can be in the bay\
+Query > ny is so cold now\
+ > it was so good to be in the city\
+ > it is a good thing\
+ > i dont think its a good thing\
+ > its not a good time\
+ > it is a great thing\
+ > it is a great thing\
+ > i know i was thinking about this\
+ > i know it was a good day\
+ > its not the best of the best\
+ > i know it is a lot\
+Processing info: Epoch[11/50] step:[2000/2852] loss:4.832200 took:0.11571s per step\
+Processing info: Epoch[11/50] step:[2200/2852] loss:4.953139 took:0.11754s per step\
+Processing info: Epoch[11/50] step:[2400/2852] loss:4.794412 took:0.10166s per step\
+Processing info: Epoch[11/50] step:[2600/2852] loss:4.970673 took:0.12910s per step\
+Processing info: Epoch[11/50] step:[2800/2852] loss:4.819216 took:0.12021s per step\
+Epoch[11/50] averaged loss:4.860698 took:359.10942s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[12/50] step:[0/2852] loss:4.569287 took:0.12719s per step\
+Processing info: Epoch[12/50] step:[200/2852] loss:5.132318 took:0.12124s per step\
+Processing info: Epoch[12/50] step:[400/2852] loss:4.885118 took:0.12166s per step\
+Processing info: Epoch[12/50] step:[600/2852] loss:5.062688 took:0.11301s per step\
+Processing info: Epoch[12/50] step:[800/2852] loss:4.690464 took:0.13110s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > happy birthday love you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+Query > help me to do the exam\
+ > i love you guys\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > we can be there\
+ > i love you too\
+ > i love this show\
+ > we are so proud of you\
+ > you are so welcome\
+ > i love you too\
+ > i love you guys\
+ > we are so proud of you\
+Query > ny is so cold now\
+ > its not a great thing\
+ > i know right\
+ > its not a great one\
+ > i love you so much\
+ > i know right\
+ > i know right\
+ > i know i was so excited\
+ > i know i was so excited to hear it\
+ > it is a great thing\
+ > i love you so much\
+Processing info: Epoch[12/50] step:[1000/2852] loss:5.068543 took:0.11850s per step\
+Processing info: Epoch[12/50] step:[1200/2852] loss:4.675488 took:0.12296s per step\
+Processing info: Epoch[12/50] step:[1400/2852] loss:4.880205 took:0.12645s per step\
+Processing info: Epoch[12/50] step:[1600/2852] loss:5.021018 took:0.12723s per step\
+Processing info: Epoch[12/50] step:[1800/2852] loss:4.583842 took:0.12514s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > im in the same place\
+ > im not going to be a good one\
+ > i can see you in the bay\
+ > i can be there\
+ > im in the city\
+ > you can be there\
+ > i can be there\
+ > im in nyc\
+ > you can do that\
+ > im not sure i dont want to know what you want to do\
+Query > ny is so cold now\
+ > its a good one\
+ > im so excited to see you\
+ > its not a good one\
+ > im so excited for you\
+ > i think its a great one\
+ > i know i was there\
+ > im not sure i dont think its a good thing\
+ > im so sorry for this\
+ > i think i could have to be a good time\
+ > im so sorry\
+Processing info: Epoch[12/50] step:[2000/2852] loss:4.662402 took:0.12085s per step\
+Processing info: Epoch[12/50] step:[2200/2852] loss:4.668276 took:0.11000s per step\
+Processing info: Epoch[12/50] step:[2400/2852] loss:5.036845 took:0.12422s per step\
+Processing info: Epoch[12/50] step:[2600/2852] loss:4.829925 took:0.11547s per step\
+Processing info: Epoch[12/50] step:[2800/2852] loss:4.549092 took:0.11686s per step\
+Epoch[12/50] averaged loss:4.813960 took:348.35361s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[13/50] step:[0/2852] loss:4.979329 took:0.12186s per step\
+Processing info: Epoch[13/50] step:[200/2852] loss:4.500998 took:0.12550s per step\
+Processing info: Epoch[13/50] step:[400/2852] loss:4.423148 took:0.11516s per step\
+Processing info: Epoch[13/50] step:[600/2852] loss:4.525398 took:0.11647s per step\
+Processing info: Epoch[13/50] step:[800/2852] loss:4.734642 took:0.12067s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you so much\
+ > thanks bro love you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it\
+ > i will have to go to the next time\
+ > you are a good one\
+ > i will be there in a while\
+ > we can help\
+ > you can be there\
+ > you are a good one\
+ > you can be in the bay area\
+ > we will help you in design and development of your website at reasonable price visit our portfolio\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+Query > ny is so cold now\
+ > im not sure i have to be a good one\
+ > i know right\
+ > its a good time\
+ > im so excited\
+ > im so excited\
+ > its a good one\
+ > im not a fan of the same thing\
+ > i know i was there\
+ > im so sorry\
+ > its a great day\
+Processing info: Epoch[13/50] step:[1000/2852] loss:4.748271 took:0.10961s per step\
+Processing info: Epoch[13/50] step:[1200/2852] loss:4.830289 took:0.11960s per step\
+Processing info: Epoch[13/50] step:[1400/2852] loss:4.502139 took:0.11503s per step\
+Processing info: Epoch[13/50] step:[1600/2852] loss:4.633288 took:0.11920s per step\
+Processing info: Epoch[13/50] step:[1800/2852] loss:4.262479 took:0.13347s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thanks bro\
+ > thank you so much\
+ > thanks so much\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > happy birthday\
+ > thanks so much\
+Query > help me to do the exam\
+ > i will be there\
+ > i will have to be in the city\
+ > you can be in the city\
+ > i will be there\
+ > i will have to be there\
+ > i dont know what you think\
+ > im in the same place\
+ > i will have a good time\
+ > i will be there\
+ > you can be there\
+Query > ny is so cold now\
+ > im so excited for you\
+ > its a good one\
+ > its a good one\
+ > its a great one\
+ > its a good one\
+ > i dont think its a good one\
+ > i know i was there\
+ > i know i was there\
+ > i dont think its a good one\
+ > i know it was a lot of fun\
+Processing info: Epoch[13/50] step:[2000/2852] loss:5.072203 took:0.11468s per step\
+Processing info: Epoch[13/50] step:[2200/2852] loss:4.667817 took:0.12384s per step\
+Processing info: Epoch[13/50] step:[2400/2852] loss:4.894386 took:0.11910s per step\
+Processing info: Epoch[13/50] step:[2600/2852] loss:4.971046 took:0.11065s per step\
+Processing info: Epoch[13/50] step:[2800/2852] loss:5.048773 took:0.11795s per step\
+Epoch[13/50] averaged loss:4.769961 took:348.83204s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[14/50] step:[0/2852] loss:4.807860 took:0.12165s per step\
+Processing info: Epoch[14/50] step:[200/2852] loss:4.897078 took:0.12964s per step\
+Processing info: Epoch[14/50] step:[400/2852] loss:4.690808 took:0.12879s per step\
+Processing info: Epoch[14/50] step:[600/2852] loss:4.805871 took:0.13956s per step\
+Processing info: Epoch[14/50] step:[800/2852] loss:4.672521 took:0.11557s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thanks bro love you\
+ > thank you\
+ > thanks so much\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thanks bro love you\
+Query > help me to do the exam\
+ > we can be there\
+ > you are the best\
+ > you are the best\
+ > we will be there\
+ > you can be there\
+ > you are the best\
+ > you can be in touch with me\
+ > i wish you were here\
+ > you are the best\
+ > i wish i could\
+Query > ny is so cold now\
+ > i dont think so\
+ > it was a good time\
+ > i dont know what i want\
+ > it was a great time\
+ > i dont know how to do that\
+ > i know i know\
+ > i dont know what i think\
+ > its so good\
+ > i know i was just thinking about this\
+ > it is so cool\
+Processing info: Epoch[14/50] step:[1000/2852] loss:4.300117 took:0.11513s per step\
+Processing info: Epoch[14/50] step:[1200/2852] loss:4.937399 took:0.12697s per step\
+Processing info: Epoch[14/50] step:[1400/2852] loss:4.905311 took:0.12095s per step\
+Processing info: Epoch[14/50] step:[1600/2852] loss:4.512434 took:0.12632s per step\
+Processing info: Epoch[14/50] step:[1800/2852] loss:4.901619 took:0.12203s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > we will help you in developing your dream app our pf  email to  leadscom\
+ > i will be there\
+ > i will have a good day\
+ > i will be there\
+ > you are the best\
+ > we can help you in design and development of your website at reasonable price visit our portfolio\
+ > i love this\
+ > we will be there\
+ > i love you too\
+ > we will be there\
+Query > ny is so cold now\
+ > its a great day\
+ > i know i know\
+ > i know right\
+ > it was a great day\
+ > i know i was just thinking of it\
+ > its a good one\
+ > i know right\
+ > its a good one\
+ > it is a good thing\
+ > i know i was just thinking of you\
+Processing info: Epoch[14/50] step:[2000/2852] loss:5.015966 took:0.11864s per step\
+Processing info: Epoch[14/50] step:[2200/2852] loss:4.916007 took:0.14079s per step\
+Processing info: Epoch[14/50] step:[2400/2852] loss:4.923066 took:0.11767s per step\
+Processing info: Epoch[14/50] step:[2600/2852] loss:4.623266 took:0.12366s per step\
+Processing info: Epoch[14/50] step:[2800/2852] loss:4.989717 took:0.11613s per step\
+Epoch[14/50] averaged loss:4.725464 took:350.61944s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[15/50] step:[0/2852] loss:4.477648 took:0.14112s per step\
+Processing info: Epoch[15/50] step:[200/2852] loss:4.846961 took:0.12296s per step\
+Processing info: Epoch[15/50] step:[400/2852] loss:4.806173 took:0.13439s per step\
+Processing info: Epoch[15/50] step:[600/2852] loss:4.727687 took:0.12373s per step\
+Processing info: Epoch[15/50] step:[800/2852] loss:4.509976 took:0.11591s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > happy birthday\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > i will be there\
+ > i dont know if you want to be in the area\
+ > i dont think you were in the city\
+ >  i will be there\
+ > you can do it\
+ > i will be there\
+ > i will be there in the city\
+ > you are so cute\
+ > i dont think i could be there\
+ > i will be there in a while\
+Query > ny is so cold now\
+ > i know i know\
+ > its so good\
+ > i know i was just there\
+ > im not going back to sleep\
+ > i know i know\
+ > its so good\
+ > its a great one\
+ > its a good one\
+ > im not sure i dont know what i think\
+ > im not sure if you want to be a good person\
+Processing info: Epoch[15/50] step:[1000/2852] loss:4.748398 took:0.10613s per step\
+Processing info: Epoch[15/50] step:[1200/2852] loss:4.876893 took:0.11720s per step\
+Processing info: Epoch[15/50] step:[1400/2852] loss:4.619491 took:0.11330s per step\
+Processing info: Epoch[15/50] step:[1600/2852] loss:4.618456 took:0.12354s per step\
+Processing info: Epoch[15/50] step:[1800/2852] loss:5.166528 took:0.11514s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > happy birthday\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thanks bro love u too\
+ > thank you\
+ > happy birthday\
+ > happy birthday bro\
+ > happy birthday\
+Query > help me to do the exam\
+ >  i will be in the city\
+ > you can be in the city\
+ > i love you too\
+ > you are so welcome\
+ > i will be there\
+ > i will be there\
+ > you can be there\
+ >  i love this\
+ > i will be there\
+ > you can do this\
+Query > ny is so cold now\
+ > its a great one\
+ > i know right\
+ > i know i was there\
+ > its a good thing\
+ > it is a good one\
+ > its so good\
+ > i know right\
+ > its so good\
+ > it is a good one\
+ > i know i was just thinking about it\
+Processing info: Epoch[15/50] step:[2000/2852] loss:4.648188 took:0.11706s per step\
+Processing info: Epoch[15/50] step:[2200/2852] loss:4.753063 took:0.12230s per step\
+Processing info: Epoch[15/50] step:[2400/2852] loss:4.495800 took:0.12009s per step\
+Processing info: Epoch[15/50] step:[2600/2852] loss:4.712046 took:0.12258s per step\
+Processing info: Epoch[15/50] step:[2800/2852] loss:4.709152 took:0.14057s per step\
+Epoch[15/50] averaged loss:4.681181 took:348.53248s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[16/50] step:[0/2852] loss:4.364213 took:0.12673s per step\
+Processing info: Epoch[16/50] step:[200/2852] loss:4.323092 took:0.12041s per step\
+Processing info: Epoch[16/50] step:[400/2852] loss:4.712020 took:0.12479s per step\
+Processing info: Epoch[16/50] step:[600/2852] loss:4.672712 took:0.12718s per step\
+Processing info: Epoch[16/50] step:[800/2852] loss:4.778691 took:0.11477s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks bro love you\
+ > thanks bro\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+Query > help me to do the exam\
+ > you can do it\
+ > i will have a new one\
+ > you are the only one\
+ > i will be there\
+ > i will have a good time\
+ > you can be there\
+ > you can be in the city\
+ > i dont know if you want to be in a while\
+ > i will be there\
+ > i will be there\
+Query > ny is so cold now\
+ > its so cute\
+ > i dont think so\
+ > i know i was there\
+ > i dont think so\
+ > im not sure what you mean\
+ > i know i was just thinking about it\
+ > i dont know what you think\
+ > its so good\
+ > i know right\
+ > its a good one\
+Processing info: Epoch[16/50] step:[1000/2852] loss:4.416859 took:0.11349s per step\
+Processing info: Epoch[16/50] step:[1200/2852] loss:4.727944 took:0.11835s per step\
+Processing info: Epoch[16/50] step:[1400/2852] loss:4.804835 took:0.12294s per step\
+Processing info: Epoch[16/50] step:[1600/2852] loss:4.722528 took:0.11682s per step\
+Processing info: Epoch[16/50] step:[1800/2852] loss:4.939077 took:0.11653s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro i appreciate it\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+ > thanks bro\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can be in the bay area\
+ > i will be there\
+ > i will be there\
+ > you can be in the area\
+ > you can do it\
+ > i will be in the city\
+ > im in nyc for the next time\
+ > i dont think i could be there\
+ > i will be there\
+ > im in the bay area\
+Query > ny is so cold now\
+ > yes its a great one\
+ > yes i know\
+ > yes its a great one\
+ > its a good thing\
+ > its not a good thing\
+ > i know i was there\
+ > yes its a good one\
+ > i know its a lot of fun\
+ > yes its not the best\
+ > yes its a good one\
+Processing info: Epoch[16/50] step:[2000/2852] loss:4.622165 took:0.11347s per step\
+Processing info: Epoch[16/50] step:[2200/2852] loss:5.171712 took:0.12495s per step\
+Processing info: Epoch[16/50] step:[2400/2852] loss:4.865977 took:0.11455s per step\
+Processing info: Epoch[16/50] step:[2600/2852] loss:4.489337 took:0.13075s per step\
+Processing info: Epoch[16/50] step:[2800/2852] loss:4.930187 took:0.12397s per step\
+Epoch[16/50] averaged loss:4.639617 took:348.41122s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[17/50] step:[0/2852] loss:4.472518 took:0.14091s per step\
+Processing info: Epoch[17/50] step:[200/2852] loss:4.639614 took:0.13034s per step\
+Processing info: Epoch[17/50] step:[400/2852] loss:4.887025 took:0.10415s per step\
+Processing info: Epoch[17/50] step:[600/2852] loss:4.655954 took:0.12569s per step\
+Processing info: Epoch[17/50] step:[800/2852] loss:4.572878 took:0.12836s per step\
+Query > happy birthday to you\
+ > thanks so much\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you so much\
+ > thank you so much\
+ > thank you so much\
+ > thanks bro\
+ > thanks so much\
+ > thank you so much\
+Query > help me to do the exam\
+ > you are so welcome to the bay\
+ > i will be in touch with you\
+ >  you can do that\
+ > i dont think you were there\
+ > you can be in touch with me\
+ > you can do it\
+ > i dont think you were there\
+ > you can be there\
+ > you are so welcome\
+ >  you can be there\
+Query > ny is so cold now\
+ > it is a good one\
+ > i dont know what i think\
+ > i know right\
+ > i know right\
+ > i know i dont know what you think\
+ > it is a great one\
+ > i dont know how to do it\
+ > its not a thing\
+ > it was a great night\
+ > its not the best of my life\
+Processing info: Epoch[17/50] step:[1000/2852] loss:4.525654 took:0.12407s per step\
+Processing info: Epoch[17/50] step:[1200/2852] loss:4.522485 took:0.13091s per step\
+Processing info: Epoch[17/50] step:[1400/2852] loss:4.271533 took:0.11540s per step\
+Processing info: Epoch[17/50] step:[1600/2852] loss:4.557507 took:0.12071s per step\
+Processing info: Epoch[17/50] step:[1800/2852] loss:4.316527 took:0.12749s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+ > thank you so much\
+ > happy birthday bro\
+ > thank u\
+ > thank you\
+Query > help me to do the exam\
+ > you can do this\
+ > you can do it again\
+ > you can be in the city\
+ > im not sure what you want\
+ > you are so welcome\
+ > you can do it again\
+ > im in the city\
+ > i will be there\
+ > you can do it again\
+ > you are the best\
+Query > ny is so cold now\
+ > it is so good\
+ > yes i am\
+ > i know right\
+ > i know i know\
+ > yes i am\
+ > it is a good thing\
+ > i dont know how to do it\
+ > yes im not in the bay\
+ > i know i love it\
+ > it is a good one\
+Processing info: Epoch[17/50] step:[2000/2852] loss:4.988709 took:0.12331s per step\
+Processing info: Epoch[17/50] step:[2200/2852] loss:4.683588 took:0.10758s per step\
+Processing info: Epoch[17/50] step:[2400/2852] loss:4.491566 took:0.11993s per step\
+Processing info: Epoch[17/50] step:[2600/2852] loss:3.926034 took:0.11898s per step\
+Processing info: Epoch[17/50] step:[2800/2852] loss:4.620368 took:0.12349s per step\
+Epoch[17/50] averaged loss:4.595959 took:348.56972s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[18/50] step:[0/2852] loss:4.638033 took:0.12119s per step\
+Processing info: Epoch[18/50] step:[200/2852] loss:4.748478 took:0.12154s per step\
+Processing info: Epoch[18/50] step:[400/2852] loss:4.560766 took:0.11569s per step\
+Processing info: Epoch[18/50] step:[600/2852] loss:4.685503 took:0.13804s per step\
+Processing info: Epoch[18/50] step:[800/2852] loss:4.268878 took:0.11738s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+ > thank you\
+Query > help me to do the exam\
+ > you are the best\
+ > you are a great person\
+ > you are a great person\
+ > thank you for the love\
+ > thank you for the love\
+ > thank you for your support\
+ > i will be there\
+ > i wish i could go to the next one\
+ > you can do this\
+ > you are the best\
+Query > ny is so cold now\
+ > its so good\
+ > im not a fan of the same thing\
+ > i know right\
+ > i know i have a feeling\
+ > i think i know\
+ > its a great one\
+ > i know i have to go to the gym\
+ > its a great one\
+ > i know right\
+ > its a great one\
+Processing info: Epoch[18/50] step:[1000/2852] loss:4.419069 took:0.11073s per step\
+Processing info: Epoch[18/50] step:[1200/2852] loss:4.495142 took:0.12089s per step\
+Processing info: Epoch[18/50] step:[1400/2852] loss:4.655792 took:0.11938s per step\
+Processing info: Epoch[18/50] step:[1600/2852] loss:4.888248 took:0.11753s per step\
+Processing info: Epoch[18/50] step:[1800/2852] loss:4.934859 took:0.11738s per step\
+Query > happy birthday to you\
+ > thanks babe\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro love you\
+ > thank you\
+ > thanks babe\
+Query > help me to do the exam\
+ > you can be in the area\
+ > im in the bay area\
+ > i dont think you are a fan of the day\
+ > im not in my mentions\
+ > im not sure what you want\
+ > i dont know if i could be in the area\
+ > i dont know if i could\
+ > i will have to go back\
+ > im not sure if you are a fan of your friends\
+ > you can do it\
+Query > ny is so cold now\
+ > i know i love it\
+ > its so good\
+ > it is so good\
+ > its a good one\
+ > i dont know what i think\
+ > i know right\
+ > i know i was there\
+ > it was a great day\
+ > its a good thing\
+ > its so good\
+Processing info: Epoch[18/50] step:[2000/2852] loss:4.486771 took:0.11503s per step\
+Processing info: Epoch[18/50] step:[2200/2852] loss:5.040325 took:0.11412s per step\
+Processing info: Epoch[18/50] step:[2400/2852] loss:4.648180 took:0.11504s per step\
+Processing info: Epoch[18/50] step:[2600/2852] loss:4.596503 took:0.12069s per step\
+Processing info: Epoch[18/50] step:[2800/2852] loss:4.429145 took:0.11814s per step\
+Epoch[18/50] averaged loss:4.554478 took:347.82514s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[19/50] step:[0/2852] loss:4.533823 took:0.13363s per step\
+Processing info: Epoch[19/50] step:[200/2852] loss:4.247685 took:0.12526s per step\
+Processing info: Epoch[19/50] step:[400/2852] loss:4.452511 took:0.12696s per step\
+Processing info: Epoch[19/50] step:[600/2852] loss:4.280007 took:0.11747s per step\
+Processing info: Epoch[19/50] step:[800/2852] loss:4.643596 took:0.11282s per step\
+Query > happy birthday to you\
+ > thanks brotha\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks brotha\
+ > happy birthday\
+ > thank you so much\
+Query > help me to do the exam\
+ > i dont know if you can do it\
+ > you can be there\
+ > you can do it\
+ > i will be there\
+ > you can be there\
+ > you can be in the bay area\
+ > you can do this\
+ > you are the best\
+ > i will be in the city\
+ > you are the best\
+Query > ny is so cold now\
+ > i know i know\
+ > im not ready for the first one\
+ > its a good one\
+ > im not ready for this\
+ > i know i know\
+ > im not ready for the next one\
+ > i dont know how to do it\
+ > its a great show\
+ > i know i know\
+ > its so good\
+Processing info: Epoch[19/50] step:[1000/2852] loss:4.711409 took:0.12118s per step\
+Processing info: Epoch[19/50] step:[1200/2852] loss:4.647721 took:0.15123s per step\
+Processing info: Epoch[19/50] step:[1400/2852] loss:4.283884 took:0.13504s per step\
+Processing info: Epoch[19/50] step:[1600/2852] loss:4.457357 took:0.11872s per step\
+Processing info: Epoch[19/50] step:[1800/2852] loss:4.556705 took:0.11526s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+Query > help me to do the exam\
+ > you can do this\
+ > i will be there\
+ > i will be there\
+ > i will be there\
+ > i will have to go to work for you\
+ > you are the sweetest\
+ > i would have to do that\
+ >  i wish you were there\
+ >  you are so welcome\
+ > i would have to do that\
+Query > ny is so cold now\
+ > i think its a good thing\
+ > i think its a great idea\
+ > i know right\
+ > its a good thing\
+ > it is so much fun\
+ > its so good\
+ > i know i was there\
+ > it was a great night\
+ > its so good\
+ > i know i was just thinking about it\
+Processing info: Epoch[19/50] step:[2000/2852] loss:4.579722 took:0.12356s per step\
+Processing info: Epoch[19/50] step:[2200/2852] loss:4.518003 took:0.11423s per step\
+Processing info: Epoch[19/50] step:[2400/2852] loss:4.806208 took:0.11875s per step\
+Processing info: Epoch[19/50] step:[2600/2852] loss:4.273700 took:0.12135s per step\
+Processing info: Epoch[19/50] step:[2800/2852] loss:4.686395 took:0.12650s per step\
+Epoch[19/50] averaged loss:4.510467 took:348.46116s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[20/50] step:[0/2852] loss:4.442321 took:0.13084s per step\
+Processing info: Epoch[20/50] step:[200/2852] loss:4.105368 took:0.12318s per step\
+Processing info: Epoch[20/50] step:[400/2852] loss:4.546463 took:0.12062s per step\
+Processing info: Epoch[20/50] step:[600/2852] loss:4.555224 took:0.14063s per step\
+Processing info: Epoch[20/50] step:[800/2852] loss:4.672090 took:0.11072s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thanks so much\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank u\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > im here for you\
+ > i wish i could go to you\
+ > im in the city\
+ > im in the city\
+ > you are the sweetest\
+ > i wish i could be there\
+ > you are a great one\
+ > you can be there\
+ > you are the sweetest\
+ > you can do it again\
+Query > ny is so cold now\
+ > i know right\
+ > it was a good time\
+ > i know right\
+ > it is a great thing to see the rest of the year\
+ > its a good thing\
+ > i dont think so\
+ > i dont know what i think\
+ > i dont know how to do it\
+ > i know right\
+ > it was a great one\
+Processing info: Epoch[20/50] step:[1000/2852] loss:4.453340 took:0.11107s per step\
+Processing info: Epoch[20/50] step:[1200/2852] loss:4.269011 took:0.11225s per step\
+Processing info: Epoch[20/50] step:[1400/2852] loss:4.164484 took:0.10240s per step\
+Processing info: Epoch[20/50] step:[1600/2852] loss:4.273357 took:0.11785s per step\
+Processing info: Epoch[20/50] step:[1800/2852] loss:4.332060 took:0.13020s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro i appreciate it\
+ > thank you so much\
+ > happy birthday\
+ > thanks so much\
+ > thank you\
+ > happy birthday bro\
+ > thanks bro\
+ > thank you\
+ > thanks so much\
+Query > help me to do the exam\
+ > i can see you there\
+ > you are the sweetest\
+ > i can do it\
+ > you are so welcome to the bay\
+ > you are so cute\
+ > you can be there\
+ > you are the best\
+ > you can be in touch with you\
+ > you can be there\
+ > you can do that\
+Query > ny is so cold now\
+ > its a good thing\
+ > its so good\
+ > im so sorry\
+ > i know right\
+ > i dont think so\
+ > im so sorry\
+ > its so good\
+ > i know right\
+ > its a good one\
+ > im not gonna get it\
+Processing info: Epoch[20/50] step:[2000/2852] loss:4.435623 took:0.11108s per step\
+Processing info: Epoch[20/50] step:[2200/2852] loss:4.788905 took:0.12716s per step\
+Processing info: Epoch[20/50] step:[2400/2852] loss:4.226834 took:0.13659s per step\
+Processing info: Epoch[20/50] step:[2600/2852] loss:4.706670 took:0.12529s per step\
+Processing info: Epoch[20/50] step:[2800/2852] loss:4.634191 took:0.11771s per step\
+Epoch[20/50] averaged loss:4.468147 took:347.17555s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[21/50] step:[0/2852] loss:4.412473 took:0.12423s per step\
+Processing info: Epoch[21/50] step:[200/2852] loss:4.140478 took:0.14500s per step\
+Processing info: Epoch[21/50] step:[400/2852] loss:4.146733 took:0.10344s per step\
+Processing info: Epoch[21/50] step:[600/2852] loss:4.583920 took:0.11412s per step\
+Processing info: Epoch[21/50] step:[800/2852] loss:4.399962 took:0.12328s per step\
+Query > happy birthday to you\
+ > happy bday\
+ > happy birthday\
+ > thank u so much\
+ > thanks so much\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thanks bro\
+ > thanks bro\
+Query > help me to do the exam\
+ > you are the only person who can be\
+ > you can do it\
+ > if you dont want to be a good person\
+ > i dont think i can do it\
+ > i will be there\
+ > you can do this\
+ > i will be in touch with you\
+ > if you can make me cry\
+ > i dont think you were in my mentions\
+ > you are the only one\
+Query > ny is so cold now\
+ > yes i know\
+ > yes its a good thing\
+ > i know i know\
+ > yes i am in the same place\
+ > i know i know\
+ > i know right\
+ > yes i am so excited for this\
+ > i know i know\
+ > i know right\
+ > its a good thing\
+Processing info: Epoch[21/50] step:[1000/2852] loss:4.497621 took:0.11430s per step\
+Processing info: Epoch[21/50] step:[1200/2852] loss:4.752132 took:0.12482s per step\
+Processing info: Epoch[21/50] step:[1400/2852] loss:4.315582 took:0.13278s per step\
+Processing info: Epoch[21/50] step:[1600/2852] loss:4.334579 took:0.11171s per step\
+Processing info: Epoch[21/50] step:[1800/2852] loss:4.499624 took:0.11716s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you so much\
+ > thank you so much\
+ > thank you so much\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it again\
+ > you can do it again\
+ > i will be in the city for a while\
+ > thank you for the love\
+ > i can see you there\
+ > thank you for the love\
+ > thank you for the love\
+ > i can see you in my house\
+ > thank you for the love\
+ > you can be in the bay\
+Query > ny is so cold now\
+ > i know right\
+ > its not a good thing but i dont think its about to be a good thing\
+ > it is so good\
+ > its not the same\
+ > it was so good\
+ > its a great show\
+ > i dont know what you think about\
+ > its not a good thing\
+ > its not the same\
+ > its not a good thing\
+Processing info: Epoch[21/50] step:[2000/2852] loss:4.474532 took:0.11799s per step\
+Processing info: Epoch[21/50] step:[2200/2852] loss:4.402538 took:0.13140s per step\
+Processing info: Epoch[21/50] step:[2400/2852] loss:4.304084 took:0.11681s per step\
+Processing info: Epoch[21/50] step:[2600/2852] loss:4.605871 took:0.12545s per step\
+Processing info: Epoch[21/50] step:[2800/2852] loss:4.314319 took:0.11700s per step\
+Epoch[21/50] averaged loss:4.424102 took:347.71011s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[22/50] step:[0/2852] loss:4.097691 took:0.12803s per step\
+Processing info: Epoch[22/50] step:[200/2852] loss:4.208226 took:0.12217s per step\
+Processing info: Epoch[22/50] step:[400/2852] loss:4.261587 took:0.11973s per step\
+Processing info: Epoch[22/50] step:[600/2852] loss:4.549716 took:0.11656s per step\
+Processing info: Epoch[22/50] step:[800/2852] loss:4.220172 took:0.13356s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ >  i will have a good day\
+ > you can be there\
+ > you can do it again\
+ >  you can be a good one\
+ >  i love you\
+ > you can be in the bay area\
+ > you are so welcome\
+ > you are so welcome\
+ > i dont think i could\
+ > you can be there\
+Query > ny is so cold now\
+ > it is a lot of fun\
+ > its a good one\
+ > it is a lot of people in the city\
+ > it was so good\
+ > i think i have a new one\
+ > i know right\
+ > i know i dont know how to do that\
+ > its a good day\
+ > its a great day\
+ > its a good day\
+Processing info: Epoch[22/50] step:[1000/2852] loss:4.419611 took:0.11749s per step\
+Processing info: Epoch[22/50] step:[1200/2852] loss:4.175786 took:0.12606s per step\
+Processing info: Epoch[22/50] step:[1400/2852] loss:4.651227 took:0.11987s per step\
+Processing info: Epoch[22/50] step:[1600/2852] loss:4.304809 took:0.11879s per step\
+Processing info: Epoch[22/50] step:[1800/2852] loss:4.376011 took:0.13514s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thank you so much\
+ > happy birthday\
+ > thanks bro\
+ > thank you\
+Query > help me to do the exam\
+ > thank you for your support\
+ > i will have to be there\
+ > you can be there\
+ > you are so cute\
+ > you can be there\
+ > you are the best\
+ > thank you for your support\
+ > i can do you guys\
+ > thank you for the shout out\
+ > thank you for the shout out\
+Query > ny is so cold now\
+ > i dont think its a good thing\
+ > it was a good time\
+ > it was so good\
+ > its a good one\
+ > it is so cute\
+ > i dont think so\
+ > it was so good\
+ > i dont think its a good time\
+ > it is so good\
+ > i know right\
+Processing info: Epoch[22/50] step:[2000/2852] loss:4.457349 took:0.11649s per step\
+Processing info: Epoch[22/50] step:[2200/2852] loss:4.469438 took:0.13054s per step\
+Processing info: Epoch[22/50] step:[2400/2852] loss:4.698774 took:0.12984s per step\
+Processing info: Epoch[22/50] step:[2600/2852] loss:4.043900 took:0.13028s per step\
+Processing info: Epoch[22/50] step:[2800/2852] loss:4.003869 took:0.11941s per step\
+Epoch[22/50] averaged loss:4.380812 took:348.45545s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[23/50] step:[0/2852] loss:4.020810 took:0.13344s per step\
+Processing info: Epoch[23/50] step:[200/2852] loss:4.305136 took:0.11903s per step\
+Processing info: Epoch[23/50] step:[400/2852] loss:4.211113 took:0.11816s per step\
+Processing info: Epoch[23/50] step:[600/2852] loss:4.424796 took:0.11898s per step\
+Processing info: Epoch[23/50] step:[800/2852] loss:4.503904 took:0.12049s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thanks my dude\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > happy birthday\
+ > happy birthday bro\
+Query > help me to do the exam\
+ > i will be there\
+ > you can do it again\
+ > i will be there\
+ > i will be there\
+ > you can do it\
+ > you can be there\
+ > i will be there\
+ > you will be there\
+ > you can do it\
+ > i will be there\
+Query > ny is so cold now\
+ > i know\
+ > i dont know what to say\
+ > im so excited for this\
+ > im not sure if i can get it\
+ > its a good one\
+ > its a good one\
+ > im not sure what happened\
+ > its a good one\
+ > its a good one\
+ > im not sure if i can get it\
+Processing info: Epoch[23/50] step:[1000/2852] loss:4.293070 took:0.12474s per step\
+Processing info: Epoch[23/50] step:[1200/2852] loss:4.446999 took:0.11940s per step\
+Processing info: Epoch[23/50] step:[1400/2852] loss:4.217509 took:0.14066s per step\
+Processing info: Epoch[23/50] step:[1600/2852] loss:4.444740 took:0.12818s per step\
+Processing info: Epoch[23/50] step:[1800/2852] loss:4.493066 took:0.12992s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks so much\
+ > thank you\
+ > thank you\
+ > happy birthday bro\
+ > thank you so much\
+ > thank you\
+ > thanks bro\
+ > happy birthday\
+ > thank you\
+Query > help me to do the exam\
+ > you are the best\
+ > i will be there\
+ > i will be there\
+ > you can be in touch\
+ > you can do it\
+ > you are the sweetest\
+ > i will be there\
+ > i would love to see you\
+ > you are the sweetest\
+ > you are the best\
+Query > ny is so cold now\
+ > its a good day\
+ > it is so cute\
+ > its so good\
+ > it was a good day\
+ > its so cute\
+ > it is so cute\
+ > it is a good one\
+ > i know i know\
+ > i know i know\
+ > i know i love it\
+Processing info: Epoch[23/50] step:[2000/2852] loss:4.378832 took:0.11375s per step\
+Processing info: Epoch[23/50] step:[2200/2852] loss:4.384272 took:0.12250s per step\
+Processing info: Epoch[23/50] step:[2400/2852] loss:4.427627 took:0.13730s per step\
+Processing info: Epoch[23/50] step:[2600/2852] loss:4.153707 took:0.11887s per step\
+Processing info: Epoch[23/50] step:[2800/2852] loss:4.364257 took:0.12238s per step\
+Epoch[23/50] averaged loss:4.337652 took:359.47431s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[24/50] step:[0/2852] loss:4.462693 took:0.14292s per step\
+Processing info: Epoch[24/50] step:[200/2852] loss:3.989612 took:0.11719s per step\
+Processing info: Epoch[24/50] step:[400/2852] loss:4.241957 took:0.13648s per step\
+Processing info: Epoch[24/50] step:[600/2852] loss:4.345584 took:0.13214s per step\
+Processing info: Epoch[24/50] step:[800/2852] loss:4.468368 took:0.14024s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thanks bro\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+ > thanks babe\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it\
+ > i will be there\
+ > you can do this\
+ > you are the sweetest\
+ > you can do this\
+ > thank you for your support\
+ > you can do it again\
+ > thank you\
+ > you can be there\
+ > i will be there\
+Query > ny is so cold now\
+ > im not going to watch it\
+ > its so good\
+ > i know right\
+ > its a good day\
+ > its a good one\
+ > i dont know what i think\
+ > its a good one\
+ > its a good one\
+ > its a good one\
+ > im not going to watch this one\
+Processing info: Epoch[24/50] step:[1000/2852] loss:4.119966 took:0.11760s per step\
+Processing info: Epoch[24/50] step:[1200/2852] loss:4.062971 took:0.12466s per step\
+Processing info: Epoch[24/50] step:[1400/2852] loss:4.102168 took:0.13200s per step\
+Processing info: Epoch[24/50] step:[1600/2852] loss:4.346763 took:0.12788s per step\
+Processing info: Epoch[24/50] step:[1800/2852] loss:4.314921 took:0.12254s per step\
+Query > happy birthday to you\
+ > thank u\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thanks so much\
+ > thank u\
+ > thank you\
+ > happy birthday bro\
+ > thanks bro\
+Query > help me to do the exam\
+ > i will be there\
+ > thank you for the retweet\
+ > thank you\
+ > i will be there\
+ > you can do it\
+ > you can be in touch\
+ > you can do it again\
+ > you are so welcome\
+ > thank you for the follow\
+ > you are the best\
+Query > ny is so cold now\
+ > im not going to sleep\
+ > its so cute\
+ > its not a long time\
+ > i know right\
+ > im not gonna get it in my life\
+ > its so good\
+ > its not the first time\
+ > i know right\
+ > im not gonna get a new one\
+ > its so good\
+Processing info: Epoch[24/50] step:[2000/2852] loss:4.372725 took:0.11571s per step\
+Processing info: Epoch[24/50] step:[2200/2852] loss:4.267149 took:0.11801s per step\
+Processing info: Epoch[24/50] step:[2400/2852] loss:4.186274 took:0.12556s per step\
+Processing info: Epoch[24/50] step:[2600/2852] loss:4.409483 took:0.11639s per step\
+Processing info: Epoch[24/50] step:[2800/2852] loss:4.347671 took:0.12572s per step\
+Epoch[24/50] averaged loss:4.297085 took:364.87263s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[25/50] step:[0/2852] loss:3.860498 took:0.12903s per step\
+Processing info: Epoch[25/50] step:[200/2852] loss:4.356673 took:0.11913s per step\
+Processing info: Epoch[25/50] step:[400/2852] loss:4.160213 took:0.13358s per step\
+Processing info: Epoch[25/50] step:[600/2852] loss:4.260047 took:0.12065s per step\
+Processing info: Epoch[25/50] step:[800/2852] loss:4.125694 took:0.12290s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > happy birthday\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thanks so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks so much\
+Query > help me to do the exam\
+ > ill be there\
+ > you can do it\
+ > you can be there\
+ > you can be in touch with me\
+ > if you want to go to the gym\
+ > if you want to come to the bay\
+ > you will be there\
+ > ill do you guys in the bay\
+ > if you want to come back to me\
+ > if you want me to dm me\
+Query > ny is so cold now\
+ > it was so good\
+ > im so sorry\
+ > its so good\
+ > im so excited for you\
+ > its a great one\
+ > it is so cute\
+ > its so good\
+ > it is so good\
+ > im so excited for you\
+ > im not ready for the next season\
+Processing info: Epoch[25/50] step:[1000/2852] loss:4.115368 took:0.12057s per step\
+Processing info: Epoch[25/50] step:[1200/2852] loss:4.432175 took:0.10739s per step\
+Processing info: Epoch[25/50] step:[1400/2852] loss:4.458364 took:0.14501s per step\
+Processing info: Epoch[25/50] step:[1600/2852] loss:4.166770 took:0.12337s per step\
+Processing info: Epoch[25/50] step:[1800/2852] loss:4.139724 took:0.13285s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+Query > help me to do the exam\
+ > you can do it again\
+ > if you want to come to my house\
+ > you can do it\
+ > you are the only one who can do this\
+ > you can be there\
+ > you can do it\
+ > you are the only one\
+ > you can do it\
+ > i would love to meet you\
+ > i will be there\
+Query > ny is so cold now\
+ > i know right\
+ > its a good thing\
+ > i know\
+ > it is so good\
+ > its so good\
+ > its a good thing\
+ > its a good one\
+ > i think so\
+ > it is so cute\
+ > i know right\
+Processing info: Epoch[25/50] step:[2000/2852] loss:4.210426 took:0.11522s per step\
+Processing info: Epoch[25/50] step:[2200/2852] loss:4.206708 took:0.12934s per step\
+Processing info: Epoch[25/50] step:[2400/2852] loss:4.058018 took:0.10497s per step\
+Processing info: Epoch[25/50] step:[2600/2852] loss:4.178378 took:0.12201s per step\
+Processing info: Epoch[25/50] step:[2800/2852] loss:4.187745 took:0.13203s per step\
+Epoch[25/50] averaged loss:4.251506 took:348.64707s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[26/50] step:[0/2852] loss:4.163329 took:0.13732s per step\
+Processing info: Epoch[26/50] step:[200/2852] loss:4.015220 took:0.12363s per step\
+Processing info: Epoch[26/50] step:[400/2852] loss:3.922013 took:0.11343s per step\
+Processing info: Epoch[26/50] step:[600/2852] loss:4.363742 took:0.12368s per step\
+Processing info: Epoch[26/50] step:[800/2852] loss:3.779192 took:0.11806s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+Query > help me to do the exam\
+ > you can do this\
+ > you are the best\
+ > you can be in touch with you\
+ > you are so welcome\
+ > you can do it\
+ > you can be in touch\
+ > you are the only one who can get you\
+ > if you dont want to go to the gym\
+ > i can do it\
+ > you can do it again\
+Query > ny is so cold now\
+ > its a good one\
+ > im so sorry i am so excited for this\
+ > im so excited\
+ > its a good thing\
+ > i know right\
+ > its a good one\
+ > im so excited\
+ > im so excited for this\
+ > i know but its a good thing\
+ > i dont think its a good thing but i dont know what it means\
+Processing info: Epoch[26/50] step:[1000/2852] loss:4.010367 took:0.11758s per step\
+Processing info: Epoch[26/50] step:[1200/2852] loss:3.805647 took:0.12429s per step\
+Processing info: Epoch[26/50] step:[1400/2852] loss:4.518124 took:0.11862s per step\
+Processing info: Epoch[26/50] step:[1600/2852] loss:4.336784 took:0.13952s per step\
+Processing info: Epoch[26/50] step:[1800/2852] loss:4.552418 took:0.12240s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thanks bro\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks so much appreciate it\
+ > thanks so much appreciate it\
+ > thank you\
+ > thanks so much appreciate the love\
+ > thank you\
+Query > help me to do the exam\
+ > you can be there\
+ > ill be there\
+ > you can be in touch\
+ > you can do it\
+ > you will be there\
+ > u are the only one i can do\
+ > u can be in my mentions\
+ > you can do it again\
+ > you can be in touch\
+ > you can do this\
+Query > ny is so cold now\
+ > i think its a great thing\
+ > im not sure if it is a good thing to get a new one\
+ > its not the best\
+ > its not the first time\
+ > i think its a great idea\
+ > im so excited\
+ > its not a good thing\
+ > its so good\
+ > im so excited\
+ > im not even going to watch the show\
+Processing info: Epoch[26/50] step:[2000/2852] loss:4.341133 took:0.10501s per step\
+Processing info: Epoch[26/50] step:[2200/2852] loss:4.497540 took:0.13607s per step\
+Processing info: Epoch[26/50] step:[2400/2852] loss:4.344266 took:0.11822s per step\
+Processing info: Epoch[26/50] step:[2600/2852] loss:4.194850 took:0.12772s per step\
+Processing info: Epoch[26/50] step:[2800/2852] loss:4.315171 took:0.12386s per step\
+Epoch[26/50] averaged loss:4.209519 took:348.87268s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[27/50] step:[0/2852] loss:3.735648 took:0.12933s per step\
+Processing info: Epoch[27/50] step:[200/2852] loss:4.143745 took:0.11680s per step\
+Processing info: Epoch[27/50] step:[400/2852] loss:4.397111 took:0.11887s per step\
+Processing info: Epoch[27/50] step:[600/2852] loss:4.084109 took:0.11434s per step\
+Processing info: Epoch[27/50] step:[800/2852] loss:3.849919 took:0.12151s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thanks so much appreciate it\
+ > thanks so much\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thanks so much appreciate it\
+ > thank you\
+Query > help me to do the exam\
+ > if you dont want to be able to help you and you can make a difference\
+ > you can do it\
+ > if you can make it i can dm you my number\
+ > you are the best\
+ > you are welcome\
+ > you can be in touch with me\
+ > you are the best\
+ > you can be there\
+ > ill be there\
+ > you can do this\
+Query > ny is so cold now\
+ > i know right\
+ > its not the same\
+ > it was so good\
+ > its so good\
+ > its not the first thing\
+ > i know i know\
+ > i know right\
+ > i know right\
+ > it is so cute\
+ > i dont know what to do with that\
+Processing info: Epoch[27/50] step:[1000/2852] loss:3.862646 took:0.11218s per step\
+Processing info: Epoch[27/50] step:[1200/2852] loss:4.057347 took:0.13030s per step\
+Processing info: Epoch[27/50] step:[1400/2852] loss:4.031043 took:0.12026s per step\
+Processing info: Epoch[27/50] step:[1600/2852] loss:4.239359 took:0.11153s per step\
+Processing info: Epoch[27/50] step:[1800/2852] loss:4.420388 took:0.12184s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro love you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thanks my brother\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thanks bro\
+Query > help me to do the exam\
+ > you are welcome to the bay\
+ > if i can get you in the bay area\
+ > you are the best\
+ > you are the sweetest\
+ > you are the sweetest\
+ > sorry to hear it\
+ > if you can come back and get your number to make me happy\
+ > sorry to hear you can dm me\
+ > you can do it again\
+ > you can do it again\
+Query > ny is so cold now\
+ > i know right\
+ > its so good\
+ > its not a long time\
+ > yes i am so excited\
+ > i know i know\
+ > i dont know what to do\
+ > yes its a good one\
+ > yes i am so happy\
+ > yes its a good one\
+ > its not a thing\
+Processing info: Epoch[27/50] step:[2000/2852] loss:4.071307 took:0.11371s per step\
+Processing info: Epoch[27/50] step:[2200/2852] loss:3.974983 took:0.12332s per step\
+Processing info: Epoch[27/50] step:[2400/2852] loss:4.306711 took:0.12110s per step\
+Processing info: Epoch[27/50] step:[2600/2852] loss:4.248615 took:0.12983s per step\
+Processing info: Epoch[27/50] step:[2800/2852] loss:4.195033 took:0.11702s per step\
+Epoch[27/50] averaged loss:4.166272 took:347.16620s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[28/50] step:[0/2852] loss:4.266230 took:0.14188s per step\
+Processing info: Epoch[28/50] step:[200/2852] loss:4.232186 took:0.11997s per step\
+Processing info: Epoch[28/50] step:[400/2852] loss:3.993196 took:0.12432s per step\
+Processing info: Epoch[28/50] step:[600/2852] loss:4.017412 took:0.12064s per step\
+Processing info: Epoch[28/50] step:[800/2852] loss:4.458188 took:0.13758s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks bro love you\
+ > thanks bro love you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > will you be there\
+ > you will be in the bay area\
+ > will you be in the bay area\
+ > will you dm me a dm\
+ > will you be in touch with you\
+ > you can do it\
+ > you can be in the area\
+ > if you can make it in your face\
+ > you can be there\
+ > you will be in the city\
+Query > ny is so cold now\
+ > its so good\
+ > its a great show\
+ > im not a fan of my friend\
+ > its so good\
+ > i dont think its a good thing\
+ > its a good thing\
+ > i know right\
+ > its so good\
+ > its a great show\
+ > im so excited\
+Processing info: Epoch[28/50] step:[1000/2852] loss:4.390250 took:0.11046s per step\
+Processing info: Epoch[28/50] step:[1200/2852] loss:4.141222 took:0.12618s per step\
+Processing info: Epoch[28/50] step:[1400/2852] loss:3.820549 took:0.12790s per step\
+Processing info: Epoch[28/50] step:[1600/2852] loss:4.223517 took:0.11630s per step\
+Processing info: Epoch[28/50] step:[1800/2852] loss:4.304807 took:0.14783s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+ > happy birthday bro\
+Query > help me to do the exam\
+ > i will be in the city\
+ > you can be in touch with you\
+ > i would have to be there\
+ > if you want to get a new phone\
+ > you can do this again\
+ > you will have a good day\
+ > if you want to get me to the gym\
+ > you can be in touch with you\
+ > you can be in touch with me\
+ > you can do it\
+Query > ny is so cold now\
+ > i know right\
+ > im so sorry\
+ > its so good\
+ > im so excited for this\
+ > i know right\
+ > im not ready for the first one\
+ > im so sorry\
+ > i know i know\
+ > im so sorry for the loss\
+ > its so good\
+Processing info: Epoch[28/50] step:[2000/2852] loss:3.892836 took:0.10556s per step\
+Processing info: Epoch[28/50] step:[2200/2852] loss:4.254029 took:0.12448s per step\
+Processing info: Epoch[28/50] step:[2400/2852] loss:4.000850 took:0.10736s per step\
+Processing info: Epoch[28/50] step:[2600/2852] loss:4.024970 took:0.11662s per step\
+Processing info: Epoch[28/50] step:[2800/2852] loss:4.016900 took:0.15250s per step\
+Epoch[28/50] averaged loss:4.124064 took:348.12457s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[29/50] step:[0/2852] loss:4.008524 took:0.14022s per step\
+Processing info: Epoch[29/50] step:[200/2852] loss:3.962683 took:0.11903s per step\
+Processing info: Epoch[29/50] step:[400/2852] loss:4.149114 took:0.11334s per step\
+Processing info: Epoch[29/50] step:[600/2852] loss:3.994779 took:0.11858s per step\
+Processing info: Epoch[29/50] step:[800/2852] loss:3.961913 took:0.11195s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you so much\
+ > thanks bro\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+ > thanks bro love you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+Query > help me to do the exam\
+ > u can do it\
+ > you can do this\
+ > you are the best\
+ > if you dont want to be a good one\
+ > if you dont want to be a good friend\
+ > you can do it\
+ > if you dont have a chance to make it a good day\
+ > you can do this\
+ > you are the best\
+ > u are the only person i know\
+Query > ny is so cold now\
+ > im so excited for this\
+ > its so good\
+ > it is a good thing\
+ > its so hot\
+ > im so sorry\
+ > im not even going to sleep\
+ > it is a good thing\
+ > im so excited\
+ > it is so cute\
+ > im so sorry\
+Processing info: Epoch[29/50] step:[1000/2852] loss:4.174014 took:0.11287s per step\
+Processing info: Epoch[29/50] step:[1200/2852] loss:4.172887 took:0.11207s per step\
+Processing info: Epoch[29/50] step:[1400/2852] loss:4.223450 took:0.12821s per step\
+Processing info: Epoch[29/50] step:[1600/2852] loss:4.126588 took:0.11950s per step\
+Processing info: Epoch[29/50] step:[1800/2852] loss:4.133980 took:0.11857s per step\
+Query > happy birthday to you\
+ > thanks bro i appreciate it\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thanks so happy\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks bro i love you\
+Query > help me to do the exam\
+ > you are so welcome\
+ > if you want me to send you a dm\
+ > you can be in touch\
+ > you can do it\
+ > you can do this\
+ > you can do it again\
+ > you are so welcome\
+ > you are so welcome\
+ > u know me\
+ > if you want to come back to my house\
+Query > ny is so cold now\
+ > its not the first time i have to go to work\
+ > i think its the best\
+ > its so cute\
+ > its so good\
+ > i think its the best\
+ > i know right\
+ > its not the same\
+ > its not the same\
+ > its not a long time\
+ > i think its a good thing\
+Processing info: Epoch[29/50] step:[2000/2852] loss:4.271319 took:0.12121s per step\
+Processing info: Epoch[29/50] step:[2200/2852] loss:4.240283 took:0.12198s per step\
+Processing info: Epoch[29/50] step:[2400/2852] loss:4.284873 took:0.11952s per step\
+Processing info: Epoch[29/50] step:[2600/2852] loss:3.933332 took:0.12680s per step\
+Processing info: Epoch[29/50] step:[2800/2852] loss:4.078214 took:0.11906s per step\
+Epoch[29/50] averaged loss:4.079768 took:348.26816s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[30/50] step:[0/2852] loss:3.901983 took:0.13425s per step\
+Processing info: Epoch[30/50] step:[200/2852] loss:3.924500 took:0.12756s per step\
+Processing info: Epoch[30/50] step:[400/2852] loss:3.955964 took:0.12033s per step\
+Processing info: Epoch[30/50] step:[600/2852] loss:3.868242 took:0.11614s per step\
+Processing info: Epoch[30/50] step:[800/2852] loss:3.574084 took:0.13391s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks so much appreciate it\
+ > happy birthday\
+ > thanks so much appreciate it\
+Query > help me to do the exam\
+ > if you want me to send you some more info\
+ > if you can follow me on instagram i can dm you later\
+ > you can do this\
+ > you can be there\
+ > ill be in touch with you\
+ > you can be in the bay area\
+ > you can do it again\
+ > you can do it\
+ > if youre in nyc\
+ > ill be there\
+Query > ny is so cold now\
+ > its so good\
+ > its so cute\
+ > i know i know\
+ > im not gonna say it\
+ > im not gonna be in the bay area\
+ > its not a good time\
+ > im not gonna say that\
+ > i know i love it\
+ > i dont think so\
+ > its so good though\
+Processing info: Epoch[30/50] step:[1000/2852] loss:4.107115 took:0.12011s per step\
+Processing info: Epoch[30/50] step:[1200/2852] loss:4.260773 took:0.14377s per step\
+Processing info: Epoch[30/50] step:[1400/2852] loss:4.042375 took:0.11918s per step\
+Processing info: Epoch[30/50] step:[1600/2852] loss:3.889184 took:0.11953s per step\
+Processing info: Epoch[30/50] step:[1800/2852] loss:4.242421 took:0.10915s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can do this\
+ > you can be in touch with me\
+ > if you want to come back to the club\
+ > you can do it\
+ > ill be in the city for a while\
+ > ill be there\
+ > if you want to go to me\
+ > ill be in touch with you\
+ > you can do it\
+ > if you want me to dm you\
+Query > ny is so cold now\
+ > its so good\
+ > its so good\
+ > its not a good thing but its not a good thing\
+ > i know right\
+ > im not even a fan of the same\
+ > its so good though\
+ > its so good\
+ > its not a long time\
+ > its not a long time but im not sure\
+ > its not a long time\
+Processing info: Epoch[30/50] step:[2000/2852] loss:4.114457 took:0.11849s per step\
+Processing info: Epoch[30/50] step:[2200/2852] loss:4.071993 took:0.11940s per step\
+Processing info: Epoch[30/50] step:[2400/2852] loss:3.787276 took:0.11937s per step\
+Processing info: Epoch[30/50] step:[2600/2852] loss:3.849113 took:0.12076s per step\
+Processing info: Epoch[30/50] step:[2800/2852] loss:4.044745 took:0.13773s per step\
+Epoch[30/50] averaged loss:4.035212 took:348.21138s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[31/50] step:[0/2852] loss:3.926464 took:0.14967s per step\
+Processing info: Epoch[31/50] step:[200/2852] loss:3.977162 took:0.12635s per step\
+Processing info: Epoch[31/50] step:[400/2852] loss:3.985917 took:0.12590s per step\
+Processing info: Epoch[31/50] step:[600/2852] loss:3.826357 took:0.11916s per step\
+Processing info: Epoch[31/50] step:[800/2852] loss:3.878900 took:0.12068s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+Query > help me to do the exam\
+ > you can do it\
+ > if you can make it i can send you a dm\
+ > you can be in touch with you\
+ > if you dont want to be able to make it to the next year\
+ > you are so cute\
+ > ill be there in a few days\
+ > you can be there\
+ > you are the only one who can do that\
+ > if you dont want to be able to make sure you can make it happen\
+ > you can be in touch with you\
+Query > ny is so cold now\
+ > its so good\
+ > im not going to sleep\
+ > its not the same\
+ > its so good\
+ > i know\
+ > i know right\
+ > im so excited for the new season\
+ > its not the first thing ive seen all day\
+ > im so sorry for the loss\
+ > i dont think so\
+Processing info: Epoch[31/50] step:[1000/2852] loss:3.982177 took:0.10926s per step\
+Processing info: Epoch[31/50] step:[1200/2852] loss:3.892716 took:0.11811s per step\
+Processing info: Epoch[31/50] step:[1400/2852] loss:4.051069 took:0.12196s per step\
+Processing info: Epoch[31/50] step:[1600/2852] loss:4.098046 took:0.12186s per step\
+Processing info: Epoch[31/50] step:[1800/2852] loss:4.025893 took:0.11383s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can be in touch with me\
+ > this is so cute\
+ > this is the best tweet ever\
+ > if you can get your tickets to your house and ill be in the city\
+ > you will be there\
+ > if you dont follow us\
+ > if youre in nyc\
+ > this is the best tweet ever\
+ > you can do it again\
+ > if you dont follow me\
+Query > ny is so cold now\
+ > its not a long time but im not even a fan\
+ > its not a good time\
+ > i know right\
+ > its so good\
+ > its not the first time i have to go\
+ > i know right\
+ > its not a long thing but im not gonna get it\
+ > im not gonna get it in the morning\
+ > im so excited for this\
+ > i know right\
+Processing info: Epoch[31/50] step:[2000/2852] loss:3.891154 took:0.11727s per step\
+Processing info: Epoch[31/50] step:[2200/2852] loss:3.988724 took:0.13737s per step\
+Processing info: Epoch[31/50] step:[2400/2852] loss:4.107401 took:0.13371s per step\
+Processing info: Epoch[31/50] step:[2600/2852] loss:4.061491 took:0.14147s per step\
+Processing info: Epoch[31/50] step:[2800/2852] loss:3.842483 took:0.12382s per step\
+Epoch[31/50] averaged loss:3.994501 took:351.73766s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[32/50] step:[0/2852] loss:3.933906 took:0.13964s per step\
+Processing info: Epoch[32/50] step:[200/2852] loss:3.675226 took:0.13061s per step\
+Processing info: Epoch[32/50] step:[400/2852] loss:4.103787 took:0.13471s per step\
+Processing info: Epoch[32/50] step:[600/2852] loss:3.849693 took:0.12461s per step\
+Processing info: Epoch[32/50] step:[800/2852] loss:3.995595 took:0.13342s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday bro\
+ > thanks my dude\
+ > thanks my dude\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thanks bro i love you\
+ > thank you\
+Query > help me to do the exam\
+ > ill be there to go to the show\
+ > you are welcome\
+ > you are the only one i need to go to the gym\
+ > if you dont want to go to the bay\
+ > you are welcome\
+ > you can do it again\
+ > ill be in your room for the wedding\
+ > you can do it\
+ > you can do it\
+ > ill be there in the morning\
+Query > ny is so cold now\
+ > im not ready\
+ > im not ready for it\
+ > i dont know how to spell this\
+ > i dont know how to do it\
+ > its so good\
+ > i know right\
+ > its so good\
+ > i dont think its a good thing\
+ > i know right\
+ > im so excited\
+Processing info: Epoch[32/50] step:[1000/2852] loss:3.797464 took:0.12865s per step\
+Processing info: Epoch[32/50] step:[1200/2852] loss:3.880208 took:0.12209s per step\
+Processing info: Epoch[32/50] step:[1400/2852] loss:3.737582 took:0.12725s per step\
+Processing info: Epoch[32/50] step:[1600/2852] loss:3.627442 took:0.12888s per step\
+Processing info: Epoch[32/50] step:[1800/2852] loss:4.193030 took:0.12224s per step\
+Query > happy birthday to you\
+ > thank u\
+ > thank you\
+ > happy birthday bro\
+ > thank you\
+ > thanks bro\
+ > happy birthday\
+ > happy birthday bro\
+ > happy birthday\
+ > thank you\
+ > thanks so much\
+Query > help me to do the exam\
+ > ill do you guys are in town\
+ > ill be there\
+ > you can do it again\
+ > if u can come to the bay area\
+ > you can do it\
+ > if u want to come back to me\
+ > if you can come to the bay and ill get it out of my life\
+ > you can do it again\
+ > you can be there\
+ > you can be in ny\
+Query > ny is so cold now\
+ > im so excited\
+ > im so excited\
+ > im so excited for this\
+ > i know\
+ > im not a fan of my friend\
+ > i dont know how to get it\
+ > i know\
+ > its not the same but its not even close\
+ > im not gonna get a new pack\
+ > its so good\
+Processing info: Epoch[32/50] step:[2000/2852] loss:3.875621 took:0.13182s per step\
+Processing info: Epoch[32/50] step:[2200/2852] loss:3.611612 took:0.11796s per step\
+Processing info: Epoch[32/50] step:[2400/2852] loss:4.099777 took:0.14216s per step\
+Processing info: Epoch[32/50] step:[2600/2852] loss:4.047845 took:0.12704s per step\
+Processing info: Epoch[32/50] step:[2800/2852] loss:3.687108 took:0.12447s per step\
+Epoch[32/50] averaged loss:3.953386 took:367.21255s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[33/50] step:[0/2852] loss:3.904146 took:0.12386s per step\
+Processing info: Epoch[33/50] step:[200/2852] loss:3.803687 took:0.10474s per step\
+Processing info: Epoch[33/50] step:[400/2852] loss:3.592690 took:0.12248s per step\
+Processing info: Epoch[33/50] step:[600/2852] loss:3.869651 took:0.13104s per step\
+Processing info: Epoch[33/50] step:[800/2852] loss:3.945561 took:0.12211s per step\
+Query > happy birthday to you\
+ > thanks so much\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thank you so much nicole\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+ > thank you\
+Query > help me to do the exam\
+ > you can  me too\
+ > ill do you guys have the same card\
+ > you can do it again\
+ > if you can come to sf\
+ > you will do it again\
+ > you will be in the bay area\
+ > you can  me too\
+ > you will be there\
+ > if you dont want to come to my house tomorrow\
+ > if you dont want to come to the bay\
+Query > ny is so cold now\
+ > its not the first time i get to the gym\
+ > its so good\
+ > its not the first time\
+ > its so good\
+ > it really is\
+ > i know i love it\
+ > it is so cute\
+ > its so good\
+ > its so good\
+ > its so cute\
+Processing info: Epoch[33/50] step:[1000/2852] loss:3.705544 took:0.12356s per step\
+Processing info: Epoch[33/50] step:[1200/2852] loss:4.019678 took:0.12078s per step\
+Processing info: Epoch[33/50] step:[1400/2852] loss:4.080774 took:0.12673s per step\
+Processing info: Epoch[33/50] step:[1600/2852] loss:3.843997 took:0.13197s per step\
+Processing info: Epoch[33/50] step:[1800/2852] loss:3.998744 took:0.12568s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you so much love\
+ > thank you\
+ > thank you\
+ > thank you so much love and miss you\
+ > happy birthday\
+ > thank you so much\
+ > thanks bro love you\
+ > happy birthday\
+Query > help me to do the exam\
+ > you can do it\
+ > you will do it again\
+ > you can do it again\
+ > if you dont follow me ill send you a dm\
+ > you will be there\
+ > you can do this\
+ > you can be in ny\
+ > i will have to be there\
+ > if you dont follow me ill send you a link\
+ > you can do this\
+Query > ny is so cold now\
+ > i dont know how to get it\
+ > its not a long time\
+ > i know right\
+ > its not a good time\
+ > its not a good thing\
+ > its so good\
+ > its not a good time\
+ > its not the best\
+ > im so excited\
+ > its not a good thing\
+Processing info: Epoch[33/50] step:[2000/2852] loss:3.719618 took:0.12262s per step\
+Processing info: Epoch[33/50] step:[2200/2852] loss:4.045981 took:0.12907s per step\
+Processing info: Epoch[33/50] step:[2400/2852] loss:3.968404 took:0.13642s per step\
+Processing info: Epoch[33/50] step:[2600/2852] loss:3.929548 took:0.12035s per step\
+Processing info: Epoch[33/50] step:[2800/2852] loss:3.955292 took:0.12252s per step\
+Epoch[33/50] averaged loss:3.910176 took:366.39133s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[34/50] step:[0/2852] loss:3.812827 took:0.15577s per step\
+Processing info: Epoch[34/50] step:[200/2852] loss:3.862703 took:0.14149s per step\
+Processing info: Epoch[34/50] step:[400/2852] loss:3.790810 took:0.12997s per step\
+Processing info: Epoch[34/50] step:[600/2852] loss:3.985843 took:0.13770s per step\
+Processing info: Epoch[34/50] step:[800/2852] loss:4.042991 took:0.12056s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > happy birthday bro\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thank you so much christian\
+ > thank you\
+Query > help me to do the exam\
+ > you will be in the bay area\
+ > ill be there\
+ > you can do it\
+ > you can do it\
+ > ill do it again\
+ > you will be there\
+ > you can be in touch with me\
+ > ill be there\
+ > you can do this\
+ > you can do it again\
+Query > ny is so cold now\
+ > im so excited\
+ > im not gonna get a pic of that\
+ > its so good\
+ > im not gonna get a new one\
+ > im so excited for this\
+ > im not gonna get a new one\
+ > im so excited for this\
+ > its so good\
+ > i know right\
+ > i know right\
+Processing info: Epoch[34/50] step:[1000/2852] loss:3.696902 took:0.13230s per step\
+Processing info: Epoch[34/50] step:[1200/2852] loss:3.913230 took:0.13222s per step\
+Processing info: Epoch[34/50] step:[1400/2852] loss:3.932291 took:0.12923s per step\
+Processing info: Epoch[34/50] step:[1600/2852] loss:3.897516 took:0.13178s per step\
+Processing info: Epoch[34/50] step:[1800/2852] loss:3.929441 took:0.13333s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+ > thanks bro love you\
+Query > help me to do the exam\
+ > you can do my best friend\
+ > you will be there\
+ > i will be there\
+ > you can do it again\
+ > you will be there\
+ > you can come back to ny\
+ > ill be in the city for the next time\
+ > you can do it\
+ > you will be in touch with me\
+ > you can come to sf\
+Query > ny is so cold now\
+ > its so good\
+ > i know right\
+ > its so good\
+ > i dont think so\
+ > i dont know what to do\
+ > im so sorry\
+ > its so good\
+ > i know right\
+ > i know right\
+ > its not a long time\
+Processing info: Epoch[34/50] step:[2000/2852] loss:3.978421 took:0.12954s per step\
+Processing info: Epoch[34/50] step:[2200/2852] loss:4.069634 took:0.12027s per step\
+Processing info: Epoch[34/50] step:[2400/2852] loss:3.755563 took:0.14118s per step\
+Processing info: Epoch[34/50] step:[2600/2852] loss:4.074337 took:0.11910s per step\
+Processing info: Epoch[34/50] step:[2800/2852] loss:3.713317 took:0.13608s per step\
+Epoch[34/50] averaged loss:3.867502 took:366.85950s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[35/50] step:[0/2852] loss:3.761754 took:0.14995s per step\
+Processing info: Epoch[35/50] step:[200/2852] loss:3.665655 took:0.11757s per step\
+Processing info: Epoch[35/50] step:[400/2852] loss:3.772017 took:0.14010s per step\
+Processing info: Epoch[35/50] step:[600/2852] loss:3.684225 took:0.11815s per step\
+Processing info: Epoch[35/50] step:[800/2852] loss:3.475241 took:0.11460s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thanks so much appreciate it\
+ > thanks my dude\
+ > happy birthday\
+ > thank you\
+ > thanks so much appreciate the love\
+Query > help me to do the exam\
+ > you can be there\
+ > you will be there\
+ > you can be in touch with me\
+ > u know me\
+ > lol ill be there in the morning\
+ > you will be in touch with me\
+ > u can do it again\
+ > lol you got it\
+ > you can do it\
+ > you can do it\
+Query > ny is so cold now\
+ > im so excited\
+ > its so good\
+ > im so excited\
+ > its so cute\
+ > i know right\
+ > im so excited\
+ > its so good\
+ > its so cute\
+ > i know right\
+ > its so good\
+Processing info: Epoch[35/50] step:[1000/2852] loss:4.081558 took:0.11383s per step\
+Processing info: Epoch[35/50] step:[1200/2852] loss:3.659582 took:0.13692s per step\
+Processing info: Epoch[35/50] step:[1400/2852] loss:3.891704 took:0.13159s per step\
+Processing info: Epoch[35/50] step:[1600/2852] loss:3.875102 took:0.11828s per step\
+Processing info: Epoch[35/50] step:[1800/2852] loss:3.771199 took:0.11826s per step\
+Query > happy birthday to you\
+ > thanks bro\
+ > thanks so much appreciate it\
+ > thank you\
+ > thanks so much appreciate it\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > happy birthday\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it again\
+ > you are so welcome\
+ > u can do it again\
+ > you can do this\
+ > you can come back to sf\
+ > you can do it\
+ > you can come back and get your money\
+ > you are so welcome\
+ > if you can make it a dm\
+ > you can come to the bay\
+Query > ny is so cold now\
+ > im not a fan of the house\
+ > i know right\
+ > im not ready for it\
+ > im not ready for it\
+ > its so good\
+ > its so good\
+ > i dont think so\
+ > im so sorry\
+ > i dont think its a thing\
+ > its so good\
+Processing info: Epoch[35/50] step:[2000/2852] loss:4.022019 took:0.11989s per step\
+Processing info: Epoch[35/50] step:[2200/2852] loss:3.686763 took:0.12191s per step\
+Processing info: Epoch[35/50] step:[2400/2852] loss:4.077388 took:0.11494s per step\
+Processing info: Epoch[35/50] step:[2600/2852] loss:3.960759 took:0.12571s per step\
+Processing info: Epoch[35/50] step:[2800/2852] loss:3.611089 took:0.11864s per step\
+Epoch[35/50] averaged loss:3.825269 took:348.26139s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[36/50] step:[0/2852] loss:3.404153 took:0.12368s per step\
+Processing info: Epoch[36/50] step:[200/2852] loss:3.588628 took:0.12228s per step\
+Processing info: Epoch[36/50] step:[400/2852] loss:3.972122 took:0.11924s per step\
+Processing info: Epoch[36/50] step:[600/2852] loss:3.830253 took:0.11726s per step\
+Processing info: Epoch[36/50] step:[800/2852] loss:3.635786 took:0.11976s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > thank you so much\
+ > thanks so much appreciate it\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ >  you can come to my house party\
+ >  you can do that\
+ >  you are a good one\
+ > u can do it\
+ > you will be in touch with me\
+ > you will do it again\
+ > you can do it again\
+ >  ill be there\
+ > you can do it again\
+ > you can do it again\
+Query > ny is so cold now\
+ > its not the best\
+ > i know right\
+ > i know right\
+ > im not going to be lit\
+ > i want to get it in the city\
+ > im not a fan of my life\
+ > im so excited\
+ > im so sorry\
+ > i know right\
+ > its so good\
+Processing info: Epoch[36/50] step:[1000/2852] loss:3.854261 took:0.11665s per step\
+Processing info: Epoch[36/50] step:[1200/2852] loss:3.472734 took:0.11019s per step\
+Processing info: Epoch[36/50] step:[1400/2852] loss:3.595962 took:0.11874s per step\
+Processing info: Epoch[36/50] step:[1600/2852] loss:4.282366 took:0.12172s per step\
+Processing info: Epoch[36/50] step:[1800/2852] loss:4.036007 took:0.12159s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+Query > help me to do the exam\
+ > u can come back to ny\
+ > you can do it again\
+ > you can do it\
+ > u can do it again\
+ >  you are the only person i can get to go with you\
+ > you can come to the bay area\
+ > you will be in touch with me\
+ > you can do it again\
+ > you can do it again\
+ > you can do it again\
+Query > ny is so cold now\
+ > i dont think so\
+ > its so cute\
+ > its so cute\
+ > its so good\
+ > i dont know what i think\
+ > im so excited\
+ > im in the bay area\
+ > im so excited\
+ > i know right\
+ > i know\
+Processing info: Epoch[36/50] step:[2000/2852] loss:3.917103 took:0.11710s per step\
+Processing info: Epoch[36/50] step:[2200/2852] loss:3.510650 took:0.14004s per step\
+Processing info: Epoch[36/50] step:[2400/2852] loss:3.907346 took:0.12461s per step\
+Processing info: Epoch[36/50] step:[2600/2852] loss:3.755975 took:0.12796s per step\
+Processing info: Epoch[36/50] step:[2800/2852] loss:3.828110 took:0.11775s per step\
+Epoch[36/50] averaged loss:3.786098 took:348.25511s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[37/50] step:[0/2852] loss:3.814609 took:0.12042s per step\
+Processing info: Epoch[37/50] step:[200/2852] loss:3.776450 took:0.12474s per step\
+Processing info: Epoch[37/50] step:[400/2852] loss:3.684589 took:0.12048s per step\
+Processing info: Epoch[37/50] step:[600/2852] loss:3.864998 took:0.11096s per step\
+Processing info: Epoch[37/50] step:[800/2852] loss:3.571559 took:0.12122s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > thanks my dude\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thank you so much\
+ > thank u\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it again\
+ > you will\
+ > you can do it again\
+ > you will be there\
+ > you can  me in the bay\
+ > you will  me too\
+ > you can do it again\
+ > u can do this\
+ > you can  me in my city\
+ > sorry to hear it\
+Query > ny is so cold now\
+ > i know right\
+ > im so sorry for this\
+ > im so sorry\
+ > its so cute\
+ > its so good\
+ > its so good\
+ > im so excited\
+ > i know right\
+ > im so excited for this\
+ > im not ready for it\
+Processing info: Epoch[37/50] step:[1000/2852] loss:3.780439 took:0.12485s per step\
+Processing info: Epoch[37/50] step:[1200/2852] loss:3.641060 took:0.11354s per step\
+Processing info: Epoch[37/50] step:[1400/2852] loss:3.354521 took:0.11882s per step\
+Processing info: Epoch[37/50] step:[1600/2852] loss:3.427433 took:0.11778s per step\
+Processing info: Epoch[37/50] step:[1800/2852] loss:3.765561 took:0.11491s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thanks bro\
+Query > help me to do the exam\
+ > you can do it again\
+ > you will be in touch with me\
+ > you can do me in my life\
+ > you can do it again\
+ > you can come to the bay\
+ > you can come to my house\
+ > you can come to my birthday\
+ > u can do it again\
+ > you can do it\
+ > you will be there\
+Query > ny is so cold now\
+ > im so excited\
+ > its so good\
+ > i know right\
+ > i dont think so\
+ > its so cute\
+ > im not a fan of the house\
+ > its so good\
+ > i know right\
+ > im so excited for this\
+ > i know right\
+Processing info: Epoch[37/50] step:[2000/2852] loss:3.596995 took:0.12069s per step\
+Processing info: Epoch[37/50] step:[2200/2852] loss:3.856554 took:0.12693s per step\
+Processing info: Epoch[37/50] step:[2400/2852] loss:3.572089 took:0.11610s per step\
+Processing info: Epoch[37/50] step:[2600/2852] loss:4.015027 took:0.12743s per step\
+Processing info: Epoch[37/50] step:[2800/2852] loss:3.635041 took:0.11770s per step\
+Epoch[37/50] averaged loss:3.744243 took:348.02961s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[38/50] step:[0/2852] loss:3.828417 took:0.12408s per step\
+Processing info: Epoch[38/50] step:[200/2852] loss:3.489355 took:0.11055s per step\
+Processing info: Epoch[38/50] step:[400/2852] loss:3.824117 took:0.11913s per step\
+Processing info: Epoch[38/50] step:[600/2852] loss:3.419691 took:0.13002s per step\
+Processing info: Epoch[38/50] step:[800/2852] loss:3.835889 took:0.10888s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks my love\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+Query > help me to do the exam\
+ > you can do it\
+ > sorry for your loss\
+ > you can\
+ > you can do it again\
+ > you are welcome\
+ > sorry for your loss\
+ > you are so cute\
+ > you are welcome\
+ > you can do it again\
+ > you can do it again\
+Query > ny is so cold now\
+ > i want to be a new york\
+ > i know i know\
+ > im so sorry\
+ > im in the bay area\
+ > i know right\
+ > its so cute\
+ > i know right\
+ > i want to get it in my apartment\
+ > im so excited for this\
+ > i want to be in a bar\
+Processing info: Epoch[38/50] step:[1000/2852] loss:3.746344 took:0.11660s per step\
+Processing info: Epoch[38/50] step:[1200/2852] loss:3.804326 took:0.13551s per step\
+Processing info: Epoch[38/50] step:[1400/2852] loss:3.815363 took:0.11666s per step\
+Processing info: Epoch[38/50] step:[1600/2852] loss:3.675607 took:0.14615s per step\
+Processing info: Epoch[38/50] step:[1800/2852] loss:3.917073 took:0.12114s per step\
+Query > happy birthday to you\
+ > happy birthday bro\
+ > happy birthday\
+ > thanks my dude\
+ > thanks bro\
+ > thanks my dude\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thanks my dude\
+ > thank you\
+Query > help me to do the exam\
+ > you will be there\
+ > you can come to the bay\
+ > you will come back to ny\
+ > u can do me in the bay\
+ > you will be in touch with me\
+ > sorry to hear that\
+ > sorry to hear you can do it again\
+ > you can come back to sf\
+ > you can come to the city with me\
+ > you will be there\
+Query > ny is so cold now\
+ > im not ready for it\
+ > im not ready for the new album\
+ > i dont think so\
+ > its so good\
+ > its not a long day but im still excited to be a fan\
+ > i know right\
+ > its so good\
+ > i dont know what this means\
+ > i know\
+ > im not ready for it\
+Processing info: Epoch[38/50] step:[2000/2852] loss:3.917881 took:0.11801s per step\
+Processing info: Epoch[38/50] step:[2200/2852] loss:3.879086 took:0.14030s per step\
+Processing info: Epoch[38/50] step:[2400/2852] loss:3.836274 took:0.12781s per step\
+Processing info: Epoch[38/50] step:[2600/2852] loss:3.819633 took:0.12323s per step\
+Processing info: Epoch[38/50] step:[2800/2852] loss:3.918373 took:0.12418s per step\
+Epoch[38/50] averaged loss:3.703662 took:359.55831s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[39/50] step:[0/2852] loss:3.667472 took:0.15388s per step\
+Processing info: Epoch[39/50] step:[200/2852] loss:3.281827 took:0.12505s per step\
+Processing info: Epoch[39/50] step:[400/2852] loss:3.664848 took:0.11828s per step\
+Processing info: Epoch[39/50] step:[600/2852] loss:3.602144 took:0.13448s per step\
+Processing info: Epoch[39/50] step:[800/2852] loss:3.512605 took:0.13691s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > thank you so much christian\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks my dude\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it again\
+ > you can come to ny\
+ > you can come to ny\
+ > you can come back in ny\
+ > you will have a blast\
+ > you will be in touch with your avi\
+ > you can do it again\
+ > you can come to ny\
+ > you can come back to ny\
+ > you can come to the bay\
+Query > ny is so cold now\
+ > i dont know why\
+ > im not ready\
+ > yes im in the bay area\
+ > i dont know what this means but i think its a good idea\
+ > yes but its a great movie\
+ > yes but its not the same\
+ > im so sorry\
+ > i dont know why i am\
+ > i know\
+ > yes but it is\
+Processing info: Epoch[39/50] step:[1000/2852] loss:3.658712 took:0.10884s per step\
+Processing info: Epoch[39/50] step:[1200/2852] loss:3.672202 took:0.13895s per step\
+Processing info: Epoch[39/50] step:[1400/2852] loss:3.695143 took:0.13603s per step\
+Processing info: Epoch[39/50] step:[1600/2852] loss:3.716324 took:0.12163s per step\
+Processing info: Epoch[39/50] step:[1800/2852] loss:3.628185 took:0.14030s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you so much christian\
+ > happy birthday bro\
+ > thank you so much christian\
+Query > help me to do the exam\
+ > you can come back to sf\
+ > u will be in the bay area\
+ > you can come to the bay\
+ > ill be there to see the show\
+ > you will be there\
+ > you can come to ny\
+ > you can come back to sf\
+ > you can do it again\
+ > you can come to ny\
+ > you can do it\
+Query > ny is so cold now\
+ > i need a new pair\
+ > i need to get a new one\
+ > im so excited for this\
+ > im so excited for this\
+ > im so excited\
+ > its a good thing\
+ > its so good though\
+ > im so excited for this\
+ > i dont think so\
+ > im so excited\
+Processing info: Epoch[39/50] step:[2000/2852] loss:3.590086 took:0.13324s per step\
+Processing info: Epoch[39/50] step:[2200/2852] loss:4.148571 took:0.11668s per step\
+Processing info: Epoch[39/50] step:[2400/2852] loss:3.717733 took:0.12153s per step\
+Processing info: Epoch[39/50] step:[2600/2852] loss:3.847876 took:0.12827s per step\
+Processing info: Epoch[39/50] step:[2800/2852] loss:3.531180 took:0.13779s per step\
+Epoch[39/50] averaged loss:3.665143 took:366.05639s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[40/50] step:[0/2852] loss:3.384830 took:0.13109s per step\
+Processing info: Epoch[40/50] step:[200/2852] loss:3.608292 took:0.11740s per step\
+Processing info: Epoch[40/50] step:[400/2852] loss:3.620194 took:0.13672s per step\
+Processing info: Epoch[40/50] step:[600/2852] loss:3.517280 took:0.11663s per step\
+Processing info: Epoch[40/50] step:[800/2852] loss:3.475089 took:0.12871s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thanks bro i appreciate it\
+ > thank you so much christian\
+ > thank you\
+ > happy birthday\
+ > thank you so much christian\
+ > thanks my dude\
+ > thanks my dude\
+Query > help me to do the exam\
+ > u can come back to sf\
+ > you can do it again\
+ > u can do me in my life\
+ > u can do it again\
+ > you can come to the city\
+ > you can come to ny\
+ > im in the city\
+ > you can do me in the bay\
+ > you can do it again\
+ > you are welcome\
+Query > ny is so cold now\
+ > im not a fan of the genre\
+ > its a good thing\
+ > its so good\
+ > its so cute\
+ > im so sorry\
+ > im so excited for this\
+ > im so sorry for the loss\
+ > i know right\
+ > its so good\
+ > i know right\
+Processing info: Epoch[40/50] step:[1000/2852] loss:3.495351 took:0.11681s per step\
+Processing info: Epoch[40/50] step:[1200/2852] loss:3.890747 took:0.14706s per step\
+Processing info: Epoch[40/50] step:[1400/2852] loss:3.591623 took:0.11527s per step\
+Processing info: Epoch[40/50] step:[1600/2852] loss:3.762496 took:0.12164s per step\
+Processing info: Epoch[40/50] step:[1800/2852] loss:3.562587 took:0.11791s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thanks bro i appreciate it\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you so much gorgeous\
+ > thank you so much gorgeous\
+Query > help me to do the exam\
+ > you can do it again\
+ > you can do it together\
+ > u are the best\
+ > u can do me in my life\
+ > you are the best\
+ > you can do it again\
+ > you can come back to sf\
+ > you can come back to ny\
+ > you can do it again\
+ > you are the best\
+Query > ny is so cold now\
+ > its so cute\
+ > i dont think its a bit better\
+ > i dont think its going to happen but its a good thing\
+ > i know\
+ > i know right\
+ > im in nyc\
+ > i dont know why i think its the same thing\
+ > its so good\
+ > im so sorry\
+ > i dont think its a thing\
+Processing info: Epoch[40/50] step:[2000/2852] loss:3.913354 took:0.11697s per step\
+Processing info: Epoch[40/50] step:[2200/2852] loss:3.459366 took:0.10950s per step\
+Processing info: Epoch[40/50] step:[2400/2852] loss:4.017923 took:0.12334s per step\
+Processing info: Epoch[40/50] step:[2600/2852] loss:3.755735 took:0.11060s per step\
+Processing info: Epoch[40/50] step:[2800/2852] loss:3.596945 took:0.11958s per step\
+Epoch[40/50] averaged loss:3.625803 took:347.68764s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[41/50] step:[0/2852] loss:3.531816 took:0.12212s per step\
+Processing info: Epoch[41/50] step:[200/2852] loss:3.509917 took:0.12699s per step\
+Processing info: Epoch[41/50] step:[400/2852] loss:3.365122 took:0.12044s per step\
+Processing info: Epoch[41/50] step:[600/2852] loss:3.602663 took:0.11853s per step\
+Processing info: Epoch[41/50] step:[800/2852] loss:3.730247 took:0.11909s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > happy birthday\
+ > thank you so much gorgeous\
+Query > help me to do the exam\
+ > u can do it again\
+ > ill be there in the city\
+ > u can do my best friend\
+ > you can do it again\
+ > you can do it again\
+ > you can do it again\
+ > ill be there\
+ > you can come to the city\
+ > you can do it together\
+ > ill be there\
+Query > ny is so cold now\
+ > i need a new pair\
+ > i need to get it in the morning\
+ > i know\
+ > i know\
+ > its so good\
+ > i know right\
+ > i need to get it together\
+ > i need to get it together\
+ > i need a new pair\
+ > its a great one\
+Processing info: Epoch[41/50] step:[1000/2852] loss:3.601485 took:0.10938s per step\
+Processing info: Epoch[41/50] step:[1200/2852] loss:3.164682 took:0.12017s per step\
+Processing info: Epoch[41/50] step:[1400/2852] loss:3.455916 took:0.11916s per step\
+Processing info: Epoch[41/50] step:[1600/2852] loss:3.630129 took:0.13300s per step\
+Processing info: Epoch[41/50] step:[1800/2852] loss:3.629203 took:0.12446s per step\
+Query > happy birthday to you\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thanks bro\
+ > happy birthday\
+ > thank you so much love\
+ > thank you\
+Query > help me to do the exam\
+ > if you can follow me in my dm and ill be there\
+ > you can dm me my email\
+ > ill join you for a while\
+ > ill be there to see you there\
+ > you can do it again\
+ > you can dm me a dm\
+ > you can dm me my number\
+ > you can dm me my email\
+ > if you want to follow me\
+ > ill be there in the city\
+Query > ny is so cold now\
+ > its so good\
+ > i know\
+ > i know\
+ > i know right\
+ > i know\
+ > im so excited for you\
+ > i know\
+ > im so excited for you\
+ > its a good one\
+ > i know right\
+Processing info: Epoch[41/50] step:[2000/2852] loss:3.264941 took:0.11451s per step\
+Processing info: Epoch[41/50] step:[2200/2852] loss:3.450593 took:0.12648s per step\
+Processing info: Epoch[41/50] step:[2400/2852] loss:3.602001 took:0.11201s per step\
+Processing info: Epoch[41/50] step:[2600/2852] loss:3.572683 took:0.12174s per step\
+Processing info: Epoch[41/50] step:[2800/2852] loss:3.801732 took:0.11959s per step\
+Epoch[41/50] averaged loss:3.588231 took:348.35548s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[42/50] step:[0/2852] loss:3.267496 took:0.14259s per step\
+Processing info: Epoch[42/50] step:[200/2852] loss:3.587996 took:0.12603s per step\
+Processing info: Epoch[42/50] step:[400/2852] loss:3.523384 took:0.11350s per step\
+Processing info: Epoch[42/50] step:[600/2852] loss:3.627500 took:0.13204s per step\
+Processing info: Epoch[42/50] step:[800/2852] loss:3.149148 took:0.11959s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thanks my dude\
+ > happy birthday\
+ > happy birthday bro\
+ > thank you\
+Query > help me to do the exam\
+ > you can do me in the bay\
+ > if you can make it i can send you my number\
+ > if you can make me cry for the wedding\
+ > if you can make it ill be there\
+ > you can do it again\
+ > you can do it again\
+ > you can do me alone\
+ > im down to the airport\
+ > you are the best\
+ > you can do it\
+Query > ny is so cold now\
+ > it is so good\
+ > its so good\
+ > i dont know how to make this happen\
+ > i dont think its going to be a bit different or 2 weeks ago\
+ > its so good\
+ > i know right\
+ > its a great thing\
+ > i know right\
+ > its so good\
+ > it is so good\
+Processing info: Epoch[42/50] step:[1000/2852] loss:3.546634 took:0.12749s per step\
+Processing info: Epoch[42/50] step:[1200/2852] loss:3.361135 took:0.12036s per step\
+Processing info: Epoch[42/50] step:[1400/2852] loss:3.701195 took:0.12359s per step\
+Processing info: Epoch[42/50] step:[1600/2852] loss:3.284134 took:0.13224s per step\
+Processing info: Epoch[42/50] step:[1800/2852] loss:3.669290 took:0.11027s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > happy birthday bro\
+ > happy birthday\
+ > thank you\
+ > thanks bro\
+ > thank you so much\
+Query > help me to do the exam\
+ > you can do it again\
+ > you can do it again\
+ > you are welcome\
+ > you can do it again\
+ > you can be there\
+ > im in nyc\
+ > im in the bay area\
+ > im in nyc for the weekend\
+ > u are the only person i can do\
+ > you can be in touch\
+Query > ny is so cold now\
+ > im so excited for this\
+ > im so excited for this\
+ > im so excited for this\
+ > i need to go back\
+ > i know\
+ > i know\
+ > i know\
+ > im so excited\
+ > i need to go to the gym\
+ > im so excited for this\
+Processing info: Epoch[42/50] step:[2000/2852] loss:3.401651 took:0.11245s per step\
+Processing info: Epoch[42/50] step:[2200/2852] loss:3.410240 took:0.12436s per step\
+Processing info: Epoch[42/50] step:[2400/2852] loss:3.382575 took:0.10645s per step\
+Processing info: Epoch[42/50] step:[2600/2852] loss:3.661704 took:0.13030s per step\
+Processing info: Epoch[42/50] step:[2800/2852] loss:3.576746 took:0.11892s per step\
+Epoch[42/50] averaged loss:3.547514 took:348.03721s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[43/50] step:[0/2852] loss:3.448910 took:0.13384s per step\
+Processing info: Epoch[43/50] step:[200/2852] loss:3.603624 took:0.12118s per step\
+Processing info: Epoch[43/50] step:[400/2852] loss:3.378575 took:0.11487s per step\
+Processing info: Epoch[43/50] step:[600/2852] loss:3.652808 took:0.12508s per step\
+Processing info: Epoch[43/50] step:[800/2852] loss:3.257963 took:0.11025s per step\
+Query > happy birthday to you\
+ > thank you so much christian\
+ > thank you\
+ > thank you\
+ > thank you so much christian\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+Query > help me to do the exam\
+ > you can do it again\
+ > im in the bay area\
+ > you will have to be a fan of work\
+ > im in the area\
+ > you can be there\
+ > im in the area\
+ > if you want to go to the gym with me\
+ > you will be there\
+ > im here for you\
+ > you will be there\
+Query > ny is so cold now\
+ > its so good\
+ > im so excited\
+ > im so excited for this\
+ > i know right\
+ > its so good\
+ > im so sorry\
+ > i know\
+ > im so excited\
+ > its so pretty cute\
+ > im in the bay area\
+Processing info: Epoch[43/50] step:[1000/2852] loss:3.340394 took:0.12081s per step\
+Processing info: Epoch[43/50] step:[1200/2852] loss:3.432865 took:0.13339s per step\
+Processing info: Epoch[43/50] step:[1400/2852] loss:3.422439 took:0.11423s per step\
+Processing info: Epoch[43/50] step:[1600/2852] loss:3.544360 took:0.11620s per step\
+Processing info: Epoch[43/50] step:[1800/2852] loss:3.639725 took:0.12239s per step\
+Query > happy birthday to you\
+ > thank u so much\
+ > thanks bro\
+ > thanks my love\
+ > happy birthday bro\
+ > thanks my dude\
+ > thank you\
+ > thanks bro\
+ > happy birthday bro\
+ > thank you\
+ > thanks my love\
+Query > help me to do the exam\
+ > if you dont want me to send me some\
+ > you can  me too\
+ > you can do it again\
+ > you will do it again\
+ > you can do it again\
+ > if you dont follow me\
+ > im in the bay area\
+ > you can do this\
+ > you can do it on the list\
+ > you can do it on monday\
+Query > ny is so cold now\
+ > im so sorry for your response\
+ > im so excited for this\
+ > i know\
+ > its a pretty cute show\
+ > i know right\
+ > its a pretty cute show\
+ > its so good\
+ > its so good\
+ > its so cute\
+ > im in the area\
+Processing info: Epoch[43/50] step:[2000/2852] loss:3.348339 took:0.12224s per step\
+Processing info: Epoch[43/50] step:[2200/2852] loss:3.386009 took:0.11594s per step\
+Processing info: Epoch[43/50] step:[2400/2852] loss:3.820671 took:0.12204s per step\
+Processing info: Epoch[43/50] step:[2600/2852] loss:3.749489 took:0.12281s per step\
+Processing info: Epoch[43/50] step:[2800/2852] loss:3.660216 took:0.12143s per step\
+Epoch[43/50] averaged loss:3.509488 took:347.75092s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[44/50] step:[0/2852] loss:3.528802 took:0.11323s per step\
+Processing info: Epoch[44/50] step:[200/2852] loss:3.671702 took:0.13561s per step\
+Processing info: Epoch[44/50] step:[400/2852] loss:3.668359 took:0.11836s per step\
+Processing info: Epoch[44/50] step:[600/2852] loss:3.161795 took:0.11997s per step\
+Processing info: Epoch[44/50] step:[800/2852] loss:3.493239 took:0.12434s per step\
+Query > happy birthday to you\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thanks bro\
+ > happy birthday bro\
+ > happy birthday\
+ > thank you\
+Query > help me to do the exam\
+ > you can do me in the bay\
+ > you are the only one i can get to go\
+ > you are the best\
+ > ill be there in the morning\
+ > ill do it again\
+ > ill be there in the city\
+ > you can come back to sf\
+ > you can do it again\
+ > you can do it again\
+ > you are the only one\
+Query > ny is so cold now\
+ > im so excited for your loss\
+ > im in the area now\
+ > its so hot\
+ > i need to get some more drinks\
+ > i have a feeling i can make it happen\
+ > its so good though\
+ > its so good\
+ > i have a feeling\
+ > its so good\
+ > its so good\
+Processing info: Epoch[44/50] step:[1000/2852] loss:3.502147 took:0.11944s per step\
+Processing info: Epoch[44/50] step:[1200/2852] loss:2.953910 took:0.12325s per step\
+Processing info: Epoch[44/50] step:[1400/2852] loss:3.370257 took:0.12191s per step\
+Processing info: Epoch[44/50] step:[1600/2852] loss:3.517927 took:0.11684s per step\
+Processing info: Epoch[44/50] step:[1800/2852] loss:3.326923 took:0.11772s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks my love\
+ > thank you\
+ > thanks my love\
+ > thank you so much\
+ > thanks my dude\
+ > thanks bro\
+ > thank you\
+Query > help me to do the exam\
+ > you can have a blast\
+ > ill be there in a few weeks\
+ > ill be there in a few weeks\
+ > you can do it for me\
+ > i will have you there\
+ > you can do it for me\
+ > you can do it again\
+ > you will do it again\
+ > you can do it again\
+ > i will have to be there\
+Query > ny is so cold now\
+ > im so excited\
+ > i need to get it in the morning\
+ > im so excited for this\
+ > im so excited\
+ > im so excited for this\
+ > its so good\
+ > im so excited\
+ > its so good\
+ > im so excited\
+ > i have to take it out\
+Processing info: Epoch[44/50] step:[2000/2852] loss:3.557513 took:0.11940s per step\
+Processing info: Epoch[44/50] step:[2200/2852] loss:3.155831 took:0.11644s per step\
+Processing info: Epoch[44/50] step:[2400/2852] loss:3.533793 took:0.13670s per step\
+Processing info: Epoch[44/50] step:[2600/2852] loss:3.087135 took:0.12854s per step\
+Processing info: Epoch[44/50] step:[2800/2852] loss:3.478690 took:0.11434s per step\
+Epoch[44/50] averaged loss:3.471301 took:348.87683s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[45/50] step:[0/2852] loss:3.373066 took:0.13894s per step\
+Processing info: Epoch[45/50] step:[200/2852] loss:3.373847 took:0.13725s per step\
+Processing info: Epoch[45/50] step:[400/2852] loss:3.459099 took:0.13315s per step\
+Processing info: Epoch[45/50] step:[600/2852] loss:3.351998 took:0.11467s per step\
+Processing info: Epoch[45/50] step:[800/2852] loss:3.367415 took:0.12808s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thank you so much christian\
+ > thank you so much christian\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > ill be there to go to the airport\
+ > you can do me there\
+ > you are my favorite friend\
+ > you are the only one i can do\
+ > you can do me in the city\
+ > ill be there in the city\
+ > you can do it again\
+ > you can do me there\
+ > you can  me too\
+ > you can  me too\
+Query > ny is so cold now\
+ > im in nyc but i have a few days\
+ > im so excited\
+ > its a great one\
+ > its so early\
+ > im so excited\
+ > its so good\
+ > im so excited\
+ > im so excited\
+ > im so sorry for this\
+ > i need to get it together\
+Processing info: Epoch[45/50] step:[1000/2852] loss:3.334804 took:0.13045s per step\
+Processing info: Epoch[45/50] step:[1200/2852] loss:3.039648 took:0.12340s per step\
+Processing info: Epoch[45/50] step:[1400/2852] loss:3.530976 took:0.12004s per step\
+Processing info: Epoch[45/50] step:[1600/2852] loss:3.483908 took:0.11443s per step\
+Processing info: Epoch[45/50] step:[1800/2852] loss:3.595014 took:0.12069s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > happy birthday\
+ > thank you\
+ > thanks my dude\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can come to the bay\
+ > ill be there in the morning\
+ > ill be there in a few weeks\
+ > you will be in touch with me\
+ > you can come to the bay\
+ > you can do it again\
+ > ill be there in the city\
+ > you can do it\
+ > sorry for your reply\
+ > you can do me alone\
+Query > ny is so cold now\
+ > its so good\
+ > its a great day\
+ > im not gonna be there\
+ > i have a few of them\
+ > im so excited\
+ > its a great one\
+ > i have a few of them\
+ > its a great one\
+ > i have a feeling\
+ > im so sorry\
+Processing info: Epoch[45/50] step:[2000/2852] loss:3.678747 took:0.11972s per step\
+Processing info: Epoch[45/50] step:[2200/2852] loss:3.306121 took:0.12946s per step\
+Processing info: Epoch[45/50] step:[2400/2852] loss:3.375499 took:0.13005s per step\
+Processing info: Epoch[45/50] step:[2600/2852] loss:3.278019 took:0.12826s per step\
+Processing info: Epoch[45/50] step:[2800/2852] loss:3.611890 took:0.13308s per step\
+Epoch[45/50] averaged loss:3.434454 took:365.50361s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[46/50] step:[0/2852] loss:3.403405 took:0.15169s per step\
+Processing info: Epoch[46/50] step:[200/2852] loss:3.283281 took:0.12905s per step\
+Processing info: Epoch[46/50] step:[400/2852] loss:3.340096 took:0.12406s per step\
+Processing info: Epoch[46/50] step:[600/2852] loss:3.438963 took:0.13502s per step\
+Processing info: Epoch[46/50] step:[800/2852] loss:3.288363 took:0.11582s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you so much christian\
+ > happy birthday bro\
+ > thank you so much christian\
+ > happy birthday\
+ > thank you\
+ > thank u\
+ > thank you\
+ > happy birthday\
+ > thank you so much\
+Query > help me to do the exam\
+ > you can do it again\
+ > you can do it again\
+ > if you dont want to meet me back to me\
+ > you will do it for me\
+ > if you want to talk about me to the end of the day\
+ > you can do me on the list\
+ > if you want to get me to the gym with me\
+ > you will be in touch with your own\
+ > you can be in touch with your own life\
+ > if you dont want me to send you a dm\
+Query > ny is so cold now\
+ > i know\
+ > im not ready for this\
+ > im so excited\
+ > i need to go to the gym with a new one\
+ > i need to get a new one\
+ > i need to get some more drinks\
+ > i need to get some of my pants\
+ > i need to go back to sleep\
+ > its so early\
+ > i know\
+Processing info: Epoch[46/50] step:[1000/2852] loss:3.206468 took:0.12880s per step\
+Processing info: Epoch[46/50] step:[1200/2852] loss:3.408099 took:0.12567s per step\
+Processing info: Epoch[46/50] step:[1400/2852] loss:3.339615 took:0.12759s per step\
+Processing info: Epoch[46/50] step:[1600/2852] loss:3.340349 took:0.13641s per step\
+Processing info: Epoch[46/50] step:[1800/2852] loss:3.344272 took:0.12990s per step\
+Query > happy birthday to you\
+ > happy birthday\
+ > happy birthday\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thanks bro\
+ > thank you\
+ > thank you\
+ > thanks my love\
+Query > help me to do the exam\
+ > ill be there to see you there\
+ > you can do it for me\
+ > you can do it for me\
+ > ill be in the city tomorrow\
+ > you can do me on my house\
+ > you can do it again\
+ > ill try to see you there\
+ > ill be there in a few weeks\
+ > you can do it again\
+ > you can do it again\
+Query > ny is so cold now\
+ > its so good\
+ > i want to be in the bay area\
+ > im so excited\
+ > im so excited\
+ > i need a nap\
+ > im so excited for this\
+ > im so excited for this\
+ > im so excited\
+ > i need to go back to work\
+ > im so excited\
+Processing info: Epoch[46/50] step:[2000/2852] loss:3.927319 took:0.12247s per step\
+Processing info: Epoch[46/50] step:[2200/2852] loss:3.250256 took:0.13436s per step\
+Processing info: Epoch[46/50] step:[2400/2852] loss:3.466561 took:0.11989s per step\
+Processing info: Epoch[46/50] step:[2600/2852] loss:3.228523 took:0.11601s per step\
+Processing info: Epoch[46/50] step:[2800/2852] loss:3.496444 took:0.12051s per step\
+Epoch[46/50] averaged loss:3.396136 took:361.12224s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[47/50] step:[0/2852] loss:3.438495 took:0.12456s per step\
+Processing info: Epoch[47/50] step:[200/2852] loss:3.219097 took:0.12211s per step\
+Processing info: Epoch[47/50] step:[400/2852] loss:3.589225 took:0.12743s per step\
+Processing info: Epoch[47/50] step:[600/2852] loss:3.387667 took:0.12116s per step\
+Processing info: Epoch[47/50] step:[800/2852] loss:3.417852 took:0.11795s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday bro\
+ > happy birthday\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can do it together\
+ > you will have to wait for tomorrows work\
+ > ill be there in the next week\
+ > you will be in the bay area\
+ > you can do me in the area\
+ > you will be there\
+ > im in the bay area\
+ > you can do me in my mentions\
+ > you can do it again\
+ > ill be there in a few hours\
+Query > ny is so cold now\
+ > i need to get some ice cream\
+ > its so good\
+ > i need a nap\
+ > its so good\
+ > i have a few hours to get back\
+ > its a good day\
+ > its so good\
+ > i need to get a new phone\
+ > i have a feeling i need to go back to work\
+ > i have a feeling\
+Processing info: Epoch[47/50] step:[1000/2852] loss:3.372057 took:0.10333s per step\
+Processing info: Epoch[47/50] step:[1200/2852] loss:3.247230 took:0.12582s per step\
+Processing info: Epoch[47/50] step:[1400/2852] loss:3.516790 took:0.12505s per step\
+Processing info: Epoch[47/50] step:[1600/2852] loss:3.409862 took:0.11395s per step\
+Processing info: Epoch[47/50] step:[1800/2852] loss:3.300517 took:0.12612s per step\
+Query > happy birthday to you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > you can come to ny\
+ > ill be there in a couple of hours\
+ > ill do it next month\
+ > ill be there in a few hours\
+ > you will come to sf\
+ > you can do it again\
+ > you can do it again\
+ > you will be there\
+ > im here for you\
+ > ill do you know what you want\
+Query > ny is so cold now\
+ > it is so cute\
+ > its so early\
+ > it is super cute\
+ > i need a new pair\
+ > its not so long\
+ > i need a new pair\
+ > its so good\
+ > i need a new pair\
+ > it is super cool\
+ > its so good\
+Processing info: Epoch[47/50] step:[2000/2852] loss:3.055415 took:0.12072s per step\
+Processing info: Epoch[47/50] step:[2200/2852] loss:3.469478 took:0.14089s per step\
+Processing info: Epoch[47/50] step:[2400/2852] loss:3.469930 took:0.11888s per step\
+Processing info: Epoch[47/50] step:[2600/2852] loss:3.635211 took:0.12051s per step\
+Processing info: Epoch[47/50] step:[2800/2852] loss:3.569818 took:0.12289s per step\
+Epoch[47/50] averaged loss:3.359614 took:348.44178s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[48/50] step:[0/2852] loss:3.294444 took:0.12499s per step\
+Processing info: Epoch[48/50] step:[200/2852] loss:3.572232 took:0.12798s per step\
+Processing info: Epoch[48/50] step:[400/2852] loss:3.151924 took:0.12766s per step\
+Processing info: Epoch[48/50] step:[600/2852] loss:3.180087 took:0.12024s per step\
+Processing info: Epoch[48/50] step:[800/2852] loss:3.396165 took:0.11862s per step\
+Query > happy birthday to you\
+ > thank you\
+ > thank you\
+ > thank you\
+ > thanks bro\
+ > happy birthday bro\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+Query > help me to do the exam\
+ > sorry for the invite\
+ > you are welcome to the bay\
+ > ill be there in the city\
+ > ill do you know how much i want to see\
+ > you are welcome for the bay\
+ > ill do it next week\
+ > you are welcome for your avi\
+ > you can do it again\
+ > you can come to ny\
+ > you can do me alone\
+Query > ny is so cold now\
+ > its not like october yet\
+ > i have a feeling i can make this happen\
+ > i have a feeling\
+ > im so sorry\
+ > im not gonna be in ny for a couple of weeks\
+ > i need to get some tickets\
+ > i need to go back\
+ > im not ready\
+ > its so good\
+ > its so good\
+Processing info: Epoch[48/50] step:[1000/2852] loss:3.302507 took:0.10857s per step\
+Processing info: Epoch[48/50] step:[1200/2852] loss:3.027791 took:0.13401s per step\
+Processing info: Epoch[48/50] step:[1400/2852] loss:3.334114 took:0.11095s per step\
+Processing info: Epoch[48/50] step:[1600/2852] loss:3.616158 took:0.12827s per step\
+Processing info: Epoch[48/50] step:[1800/2852] loss:3.526949 took:0.11851s per step\
+Query > happy birthday to you\
+ > happy birthday bro\
+ > thanks my dude\
+ > thanks bro love u\
+ > happy birthday bro\
+ > thanks my dude\
+ > thank you\
+ > happy birthday bro\
+ > thank you\
+ > happy birthday bro\
+ > thanks bro love you\
+Query > help me to do the exam\
+ > ill do you know how to do\
+ > ill be there in a few weeks\
+ > sorry ill see you in nyc\
+ > you will be in touch with me\
+ > you can  me too\
+ > you will be in touch with me\
+ > sorry for your loss\
+ > ill do it again if you are here\
+ > you will do it again\
+ > you can do me in the bay\
+Query > ny is so cold now\
+ > its so early\
+ > im not gonna be a fan of a minimum\
+ > im not ready for the season\
+ > its so good\
+ > im so sorry\
+ > i need a nap\
+ > its so good\
+ > its so good\
+ > its so good\
+ > i have a feeling i need a new one\
+Processing info: Epoch[48/50] step:[2000/2852] loss:3.400513 took:0.11859s per step\
+Processing info: Epoch[48/50] step:[2200/2852] loss:3.299599 took:0.11882s per step\
+Processing info: Epoch[48/50] step:[2400/2852] loss:3.479118 took:0.12781s per step\
+Processing info: Epoch[48/50] step:[2600/2852] loss:3.449835 took:0.11704s per step\
+Processing info: Epoch[48/50] step:[2800/2852] loss:3.649016 took:0.11419s per step\
+Epoch[48/50] averaged loss:3.325424 took:347.99935s\
+[TL] [*] n.npz saved\
+Processing info: Epoch[49/50] step:[0/2852] loss:3.322073 took:0.12929s per step\
+Processing info: Epoch[49/50] step:[200/2852] loss:3.053267 took:0.11587s per step\
+Processing info: Epoch[49/50] step:[400/2852] loss:3.044158 took:0.12176s per step\
+Processing info: Epoch[49/50] step:[600/2852] loss:3.191162 took:0.12486s per step\
+Processing info: Epoch[49/50] step:[800/2852] loss:3.382923 took:0.12162s per step\
+Query > happy birthday to you\
+ > thank you\
+ > happy birthday bro\
+ > happy birthday\
+ > thank you\
+ > thank you\
+ > thanks my dude\
+ > thanks bro i appreciate it\
+ > thank you\
+ > thank you\
+ > happy birthday\
+Query > help me to do the exam\
+ > you can  me in my bed\
+ > im in the bay area\
+ > you can do me on the train\
+ > im in the bay area\
+ > ill be there in a few hours\
+ > you can  me in my mentions\
+ > you can do me on the list\
+ > ill do it again\
+ > you can  me too\
+ > you can do me on my list\
+Query > ny is so cold now\
+ > im not ready for this\
+ > i have a feeling i need to go back\
+ > its so good\
+ > im so excited for this\
+ > im so excited for this\
+ > its so hot\
+ > im not gonna get it in the morning lol\
+ > its so hot and im so sad\
+ > i need to go back\
+ > i have a few of these\
+Processing info: Epoch[49/50] step:[1000/2852] loss:3.246855 took:0.11681s per step\
+Processing info: Epoch[49/50] step:[1200/2852] loss:3.394690 took:0.12282s per step\
+Processing info: Epoch[49/50] step:[1400/2852] loss:3.614823 took:0.12218s per step\
+Processing info: Epoch[49/50] step:[1600/2852] loss:3.207809 took:0.12411s per step\
+Processing info: Epoch[49/50] step:[1800/2852] loss:3.157490 took:0.12772s per step\
+Query > happy birthday to you\
+ > thank you so much gorgeous\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you so much\
+ > thank you\
+ > thank you\
+ > thank you so much\
+Query > help me to do the exam\
+ > ill be there in a few weeks\
+ > you can do me in my life\
+ > you can  me too\
+ > you can  me too\
+ > you can  me in person\
+ > you can do me in my life\
+ > you can do me in my mentions\
+ > ill try to see it in the morning\
+ > you are so cute\
+ > you can  me in person\
+Query > ny is so cold now\
+ > i need to get a new phone\
+ > im so excited for your loss\
+ > i need a new pair\
+ > im so excited for your response\
+ > i have a feeling\
+ > i need to get some more\
+ > im so excited for your loss\
+ > i have a feeling i need to go back\
+ > its so good\
+ > i need a few hours\
+Processing info: Epoch[49/50] step:[2000/2852] loss:3.277684 took:0.11322s per step\
+Processing info: Epoch[49/50] step:[2200/2852] loss:3.490147 took:0.11741s per step\
+Processing info: Epoch[49/50] step:[2400/2852] loss:3.486996 took:0.11481s per step\
+Processing info: Epoch[49/50] step:[2600/2852] loss:3.232847 took:0.13410s per step\
+Processing info: Epoch[49/50] step:[2800/2852] loss:3.426976 took:0.12617s per step\
+Epoch[49/50] averaged loss:3.289714 took:349.06773s\
+[TL] [*] n.npz saved\
+xizerong@cecs586101:~/cheng/seq2seq-chatbot-master$ packet_write_wait: Connection to 10.173.214.114 port 22: Broken pipe}
